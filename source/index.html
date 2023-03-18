@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='ru'>
 <head>
   <meta charset='UTF-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Тур на Камчатку</title>
+  <link rel='preload' href='fonts/Lato-400.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
+  <link rel='preload' href='fonts/Lato-700.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
+  <link rel='preload' href='fonts/Inter-700.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
+  <link rel='preload' href='fonts/Montserrat-700.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
+  <link rel='icon' href='favicon.ico'>
+  <link rel='icon' href='img/favicons/favicon.png' type='image/png' sizes='32x32'>
+  <link rel='apple-touch-icon' href='img/favicons/favicon-apple.png'>
+  <link rel='manifest' href='manifest.webmanifest'>
+  <link rel='stylesheet' href='css/style.min.css'>
 </head>
+
 <body>
 
+  <header class='header'>
+    <div class='header__container'>
+      <a class='header__logo'>
+        <img class='header__img' src='img/logo.svg' width='167' height='37' alt='Логотип сайта Dreamkam Tour'>
+      </a>
+      <button class='header__burger header__burger--nojs header__burger--close' type='button'>
+        <span class='visually-hidden'>открыть меню</span>
+        <span class='header__burger-decorate'></span>
+        <span class='header__burger-decorate'></span>
+        <span class='header__burger-decorate'></span>
+      </button>
+      <div class='header__wrapper-navigation header__wrapper-navigation--nojs header__wrapper-navigation--close'>
+        <nav class='menu'>
+          <ul class='menu__list'>
+            <li class='menu__item'>
+              <a class='menu__link' href='#'>Расписание тура</a>
+            </li>
+            <li class='menu__item'>
+              <a class='menu__link' href='#'>Как записаться</a>
+            </li>
+            <li class='menu__item'>
+              <a class='menu__link' href='#'>Команда</a>
+            </li>
+            <li class='menu__item menu__item--block'>
+              <a class='menu__link' href='#'>Стоимость</a>
+            </li>
+          </ul>
+        </nav>
+        <button class='header__button' type='button'>Забронировать</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class='promo'>
+      <div class='promo__container'>
+        <h1 class='visually-hidden'>Путишествие на Камчатку</h1>
+        <h2 class='promo__title'>Мечты о далекой Камчатке - близко</h2>
+        <div class='promo__data'>
+          <p class='promo__data-info'>23.06 - 04.07  Dream tour</p>
+        </div>
+        <p class='promo-text'>Тур перевернет ваш мир с ног на голову и оставит впечатления на всю жизнь.</p>
+        <a class='promo__link' href=''>Расписание тура</a>
+      </div>
+      <div class='promo__slider'>
+        <ul class='promo__slider-list'>
+          <li class='promo__slider-item'>
+            <img class='promo__slider-img' src='' alt=''>
+          </li>
+          <li class='promo__slider-item'>
+            <img class='promo__slider-img' src='' alt=''>
+          </li>
+          <li class='promo__slider-item'>
+            <img class='promo__slider-img' src='' alt=''>
+          </li>
+        </ul>
+        <div class='promo__slider-buttons'>
+          <button class='promo__slider-button promo__slider-button--previous'>
+            <span class='visually-hidden'>перелеснуть слайдер назад</span>
+          </button>
+          <button class='promo__slider-button promo__slider-next'>
+            <span class='visually-hidden'>перелеснуть слайдер далее</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src='js/script.min.js'></script>
+
 </body>
+
 </html>

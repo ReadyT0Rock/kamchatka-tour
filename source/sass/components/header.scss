@@ -1,0 +1,137 @@
+.header {
+  min-height: 110px;
+  padding-top: 21px;
+
+  background-color: transparent;
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: $mobile-width;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 19px;
+    padding: 0;
+    margin-top: 9px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: none;
+    &--nojs {
+      display: none;
+    }
+    &--open {
+      width: 20px;
+      height: 20px;
+    }
+
+    &-decorate {
+      width: 24px;
+      height: 3px;
+
+      border-radius: 1px;
+      background-color: $third-color-text;
+    }
+
+    &--open {
+      position: relative;
+      & .header__burger-decorate {
+        display: none;
+      }
+    }
+
+    &--open::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+
+      width: 24px;
+      height: 1px;
+
+      background-color: $second-color-bg;
+
+      transform: rotate(45deg);
+    }
+
+    &--open::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+
+      width: 24px;
+      height: 1px;
+
+      background-color: $second-color-bg;
+
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__wrapper-navigation {
+    position: absolute;
+
+    width: $mobile-width;
+    min-height: 568px;
+    padding-top: 104px;
+    padding-bottom: 80px;
+
+    background-color: $main-color-bg;
+    &--close {
+      display: none;
+    }
+    &--open {
+      display: block;
+    }
+    &--nojs {
+      position: relative;
+      display: block;
+
+      & .header__logo {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    width: 177px;
+    min-height: 40px;
+    padding: 11px 32px 10px 32px;
+
+    background-color: transparent;
+    border: 1px solid $second-color-bg;
+    border-radius: 5px;
+  }
+}
+
+.menu {
+  margin-bottom: 48px;
+
+  &__list {
+    text-align: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 56px;
+  }
+
+  &__link {
+    @include font(20px, 32px, 400);
+    color: $main-color-text;
+  }
+}

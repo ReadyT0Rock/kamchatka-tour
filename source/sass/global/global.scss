@@ -17,12 +17,12 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0;
-  font-family: @font-CU;
+  font-family: $font-lato;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 24px;
   font-weight: 400;
-  color: @main-color-text;
-  background-color: @main-color-bg;
+  color: $main-color-text;
+  background-color: $main-color-bg;
 }
 
 button, input, select, textarea {

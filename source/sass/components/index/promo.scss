@@ -1,0 +1,13 @@
+.promo {
+  min-height: 1032px;
+
+
+  &__container {
+    width: $mobile-width;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    background: url('../img/index/promo/bg-tablet.jpg') no-repeat;
+    background-size: cover;
+  }
+}
