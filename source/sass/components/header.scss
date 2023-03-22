@@ -1,4 +1,7 @@
 .header {
+  position: relative;
+  z-index: 1;
+
   min-height: 110px;
   padding-top: 21px;
 
@@ -31,9 +34,11 @@
 
     background-color: transparent;
     border: none;
+
     &--nojs {
       display: none;
     }
+
     &--open {
       width: 20px;
       height: 20px;
@@ -49,6 +54,7 @@
 
     &--open {
       position: relative;
+
       & .header__burger-decorate {
         display: none;
       }
@@ -82,9 +88,13 @@
       transform: rotate(-45deg);
     }
   }
-
+  &__button {
+    display: none;
+  }
   &__wrapper-navigation {
     position: absolute;
+    top: -21px;
+    left: 0;
 
     width: $mobile-width;
     min-height: 568px;
@@ -92,12 +102,19 @@
     padding-bottom: 80px;
 
     background-color: $main-color-bg;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 3px solid $third-color-bg;
+    border-top: 0;
+
     &--close {
       display: none;
     }
+
     &--open {
       display: block;
     }
+
     &--nojs {
       position: relative;
       display: block;
@@ -107,31 +124,66 @@
       }
     }
   }
-
-  &__button {
-    width: 177px;
-    min-height: 40px;
-    padding: 11px 32px 10px 32px;
-
-    background-color: transparent;
-    border: 1px solid $second-color-bg;
-    border-radius: 5px;
-  }
 }
 
 .menu {
   margin-bottom: 48px;
-
   &__list {
     text-align: center;
   }
-
   &__item:not(:last-child) {
     margin-bottom: 56px;
   }
-
   &__link {
     @include font(20px, 32px, 400);
     color: $main-color-text;
+    &--book {
+      width: 177px;
+      min-height: 40px;
+      padding: 11px 32px 10px 32px;
+      margin-left: 16px;
+
+      border: 1px solid $second-color-bg;
+      border-radius: 5px;
+    }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .header {
+    &__container {
+      justify-content: flex-start;
+      width: $tablet-width;
+      padding: 0 42px;
+    }
+    &__burger {
+      order: 3;
+    }
+    &__button {
+      display: block;
+      order: 2;
+      width: 177px;
+      min-height: 40px;
+      padding: 11px 32px 10px 32px;
+      margin-left: auto;
+      margin-right: 29px;
+
+      color: $third-color-text;
+
+      background-color: transparent;
+      border: 1px solid $third-color-bg;
+      border-radius: 5px;
+    }
+    &__wrapper-navigation {
+      left: 450px;
+      min-height: 500px;
+      padding-bottom: 20px;
+    }
+  .menu {
+    &__link--book {
+      display: none;
+    }
+  }
+}
+}
+

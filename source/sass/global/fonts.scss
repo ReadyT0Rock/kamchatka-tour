@@ -26,6 +26,15 @@
 }
 
 @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../../fonts/Inter-900.woff2') format('woff2'),
+        url('../../fonts/Inter-900.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
