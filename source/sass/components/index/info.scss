@@ -1,0 +1,12 @@
+.info {
+  min-height: 1451px;
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    background: url('../img/index/info/bg-mobile.jpg') no-repeat;
+    background-position: left bottom;
+  }
+}

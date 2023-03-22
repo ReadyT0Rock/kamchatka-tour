@@ -1,0 +1,13 @@
+.footer {
+  min-height: 1161px;
+
+  color: $second-color-text;
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    background-color: #000000;
+  }
+}
