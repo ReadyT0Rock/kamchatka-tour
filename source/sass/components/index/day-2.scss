@@ -1,0 +1,57 @@
+.day-2 {
+  position: relative;
+
+  min-height: 1389px;
+
+  color: $main-color-text;
+  background: url('../img/index/day-2/background.jpg') no-repeat;
+  background-position: 178px 390px;
+  &::before {
+    position: absolute;
+    content: '';
+    top: -70px;
+    left: 19px;
+
+    width: 1025px;
+    height: 166px;
+
+    background: url('../img/bg-decorate-tablet-and-mobile-version.png') no-repeat;
+  }
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 21px;
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 24px;
+
+    color: #212121;
+  }
+  &__content {
+    margin-bottom: 24px;
+  }
+  &__text {
+    & > a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    &:nth-child(1) {
+      margin-bottom: 23px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 178px;
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-bottom: 24px;
+    }
+  }
+}

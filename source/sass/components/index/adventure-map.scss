@@ -1,0 +1,17 @@
+.title-adventure-map {
+  margin-bottom: 24px;
+
+  font-family: $font-montserrat;
+  @include font(24px, 32px, 700);
+  color: $second-color-text;
+  & > b {
+    color: #f47648;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .adventure-map {
+    min-height: 7372px;
+  }
+}
+

@@ -1,0 +1,42 @@
+.team {
+  min-height: 620px;
+  margin-bottom: 55px;
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: $font-montserrat;
+    @include font(32px, 40px, 700);
+    color: #121212;
+  }
+  &__text {
+    display: none;
+  }
+}
+
+.slider {
+  &__item {
+    &--profile-info {
+      margin-right: 16px;
+      & .slider__img {
+        margin-bottom: 18px;
+      }
+      & cite {
+        @include font(18px, 24px, 700);
+        font-style: normal;
+      }
+    }
+  }
+  &__link-social {
+    font-weight: 400;
+    color: #f47648;
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

@@ -91,9 +91,12 @@
   &__button {
     display: none;
   }
-  &__wrapper-navigation {
-    position: absolute;
-    top: -21px;
+}
+
+.menu {
+  position: absolute;
+  margin-bottom: 48px;
+  top: -21px;
     left: 0;
 
     width: $mobile-width;
@@ -107,27 +110,22 @@
     border: 3px solid $third-color-bg;
     border-top: 0;
 
-    &--close {
+  &--close {
+    display: none;
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &--nojs {
+    position: relative;
+    display: block;
+
+    & .header__logo {
       display: none;
     }
-
-    &--open {
-      display: block;
-    }
-
-    &--nojs {
-      position: relative;
-      display: block;
-
-      & .header__logo {
-        display: none;
-      }
-    }
   }
-}
-
-.menu {
-  margin-bottom: 48px;
   &__list {
     text-align: center;
   }
@@ -156,7 +154,7 @@
       width: $tablet-width;
       padding: 0 42px;
     }
-    &__burger {
+    &__wrapper-navigation {
       order: 3;
     }
     &__button {
@@ -174,12 +172,10 @@
       border: 1px solid $third-color-bg;
       border-radius: 5px;
     }
-    &__wrapper-navigation {
-      left: 450px;
-      min-height: 500px;
-      padding-bottom: 20px;
-    }
   .menu {
+    left: 450px;
+    min-height: 500px;
+    padding-bottom: 20px;
     &__link--book {
       display: none;
     }

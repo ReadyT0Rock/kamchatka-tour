@@ -1,0 +1,20 @@
+.day-8 {
+  min-height: 494px;
+  margin-top: -228px;
+  margin-bottom: 43px;
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 229px 16px 45px;
+
+    background: url('../img/index/day-8/bg-mobile.png') no-repeat;
+    background-size: 320px 489px;
+  }
+  &__title {
+    margin-bottom: 23px;
+  }
+  &__content {
+    color: $second-color-text;
+  }
+}

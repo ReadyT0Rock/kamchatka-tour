@@ -5,10 +5,13 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Тур на Камчатку</title>
+  <link rel='preload' href='fonts/Lato-300.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
   <link rel='preload' href='fonts/Lato-400.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
   <link rel='preload' href='fonts/Lato-700.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
   <link rel='preload' href='fonts/Inter-700.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
   <link rel='preload' href='fonts/Inter-900.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
+  <link rel='preload' href='fonts/Montserrat-400.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
+  <link rel='preload' href='fonts/Montserrat-600.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
   <link rel='preload' href='fonts/Montserrat-700.woff2' type='type/woff2' as='font' crossorigin='anonymous'>
   <link rel='icon' href='favicon.ico'>
   <link rel='icon' href='img/favicons/favicon.png' type='image/png' sizes='32x32'>
@@ -24,14 +27,14 @@
       <a class='header__logo'>
         <img class='header__img' src='img/logo.svg' width='167' height='37' alt='Логотип сайта Dreamkam Tour'>
       </a>
-      <button class='header__burger header__burger--nojs header__burger--close' type='button'>
-        <span class='visually-hidden'>открыть меню</span>
-        <span class='header__burger-decorate'></span>
-        <span class='header__burger-decorate'></span>
-        <span class='header__burger-decorate'></span>
-      </button>
-      <div class='header__wrapper-navigation header__wrapper-navigation--nojs header__wrapper-navigation--close'>
-        <nav class='menu'>
+      <div class='header__wrapper-navigation'>
+        <button class='header__burger header__burger--nojs header__burger--close' type='button'>
+          <span class='visually-hidden'>открыть меню</span>
+          <span class='header__burger-decorate'></span>
+          <span class='header__burger-decorate'></span>
+          <span class='header__burger-decorate'></span>
+        </button>
+        <nav class='menu menu--nojs menu--close'>
           <ul class='menu__list'>
             <li class='menu__item'>
               <a class='menu__link' href='#'>Расписание тура</a>
@@ -66,26 +69,30 @@
           <p class='promo__text'>Тур перевернет ваш мир с ног на голову и оставит впечатления на всю жизнь.</p>
           <a class='promo__link' href='#'>Расписание тура</a>
         </div>
+        <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
         <div class='slider'>
-          <ul class='slider__list'>
+          <ul class='slider__list slider__list--promo-margin'>
             <li class='slider__item'>
               <img class='slider__img' src='img/index/promo/slider-photo-1.png'
-                srcset='img/index/promo/slider-photo1@2x.png 2x' width='269' height='268' alt=''>
+                srcset='img/index/promo/slider-photo1@2x.png 2x' width='269' height='268' alt='мужчина стоит на камне и смотрит на горный хребет'>
+                <div class='slider__description-img slider__description-img--promo'>
+                  <b>Какая-то подпись</b>
+                </div>
             </li>
             <li class='slider__item'>
               <img class='slider__img' src='img/index/promo/slider-photo-2.png'
-                srcset='img/index/promo/slider-photo2@2x.png 2x' width='211' height='208' alt=''>
+                srcset='img/index/promo/slider-photo2@2x.png 2x' width='211' height='208' alt='два медведя посутся на лугу, один большой, другой маленький'>
             </li>
             <li class='slider__item'>
               <img class='slider__img' src='img/index/promo/slider-photo-3.png'
-                srcset='img/index/promo/slider-photo3@2x.png 2x' width='211' height='208' alt=''>
+                srcset='img/index/promo/slider-photo3@2x.png 2x' width='211' height='208' alt='вид сверху на море, частично видно горный утес, к которому прибиваются волны'>
             </li>
           </ul>
-          <div class='slider-buttons'>
+          <div class='slider-buttons slider-buttons--margin-promo'>
             <button class='slider-buttons__btn slider-buttons__btn--previous' type='button' disabled>
               <span class='visually-hidden'>перелеснуть слайдер назад</span>
             </button>
-            <button class='slider-buttons__btn slider-buttons__btn--next'type='button'>
+            <button class='slider-buttons__btn slider-buttons__btn--next' type='button'>
               <span class='visually-hidden'>перелеснуть слайдер далее</span>
             </button>
           </div>
@@ -114,39 +121,38 @@
     <section class='info'>
       <div class='info__container'>
         <h2 class='info__title'>Путешествие на край света начинается</h2>
-        <p class='info__text'>Ваша мечта осуществилась, вы приняли решение, и вам предстоит путешествие на край света.
-        </p>
-        <p class='info__text'>Этот маршрут лучший вариант для тех, кто хочет ощутить, как живёт самая молодая земля
-          нашей планеты, многое увидеть, испытать на себе и полюбить, увезти целый рюкзак незабываемых чувств и
-          впечатлений. Каждый день вы будете выезжать на радиальные маршруты, а проживать в комфортабельных двухместных
-          номерах.</p>
+        <div class='info__content'>
+          <p>Ваша мечта осуществилась, вы приняли решение, и вам предстоит путешествие на край света.</p>
+          <p>Этот маршрут лучший вариант для тех, кто хочет ощутить, как живёт самая молодая земля
+            нашей планеты, многое увидеть, испытать на себе и полюбить, увезти целый рюкзак незабываемых чувств и
+            впечатлений. Каждый день вы будете выезжать на радиальные маршруты, а проживать в комфортабельных двухместных
+            номерах.</p>
+        </div>
         <h3 class='visually-hidden'>Преимущества поездки</h3>
         <ul class='advantages'>
-          <li class='advantages__item'>
+          <li class='advantages__item advantages__item--difficulty'>
             <h4 class='advantages__title'>Сложность</h4>
             <p class='advantages__description'>Для семейного отдыха</p>
           </li>
-          <li class='advantages__item'>
+          <li class='advantages__item advantages__item---period'>
             <h4 class='advantages__title'>Период</h4>
             <p class='advantages__description'>Июль - сентябрь</p>
           </li>
-          <li class='advantages__item'>
+          <li class='advantages__item advantages__item--duration'>
             <h4 class='advantages__title'>Длительность</h4>
             <p class='advantages__description'>7 дней / 6 ночей</p>
           </li>
-          <li class='advantages__item'>
+          <li class='advantages__item advantages__item--accommodation'>
             <h4 class='advantages__title'>Проживание</h4>
             <p class='advantages__description'>Отель, без палаток</p>
           </li>
         </ul>
         <b class='info__description'>Камчатка – земля великолепной заснеженной природы, действующих вулканов и диких
           мест, где ещё не ступала нога человека.</b>
-        <blockquote class='blockquote'>
-          <q class='blockquote__blockquote'>"Когда мы подлетали к Камчатке, у меня захватило дух от увиденного. Это за
-            гранью реальности. Невероятно!"</q>
-          <cite class='blockquote__author-name'>Максим, <a class='info__autor-link' href='#'>@max_max</a>
-          </cite>
-        </blockquote>
+        <div class='blockquote'>
+          <blockquote class='blockquote__blockquote'>"Когда мы подлетали к Камчатке, у меня захватило дух от увиденного. Это за гранью реальности. Невероятно!"</blockquote>
+          <cite class='blockquote__author-name'>Максим, <a class='blockquote__author-link' href='#'>@max_max</a></cite>
+        </div>
       </div>
     </section>
 
@@ -155,32 +161,41 @@
       <section class='day-1'>
         <div class='day-1__container'>
           <h2 class='day-1__title title-adventure-map'><b>День 1.</b> Прибытие. Встреча в аэропорту и размещение</h2>
-          <p class='day-1__text'>С высоты птичьего полета вы увидите знаменитые «домашние» вулканы – Корякский,
-            Авачинский и Козельский. У выхода в аэропорту <b>вас встретят с табличкой «ДРИМ ТУР».</b>></p>
-          <p class='day-1__text'><b>По пути в гостиницу сбор средств</b> с членов группы, инструктаж по программе этого
-            дня (бассейн с термальной водой, шашлык, знакомство с группой, алкоголь, фейерверк не раньше 20:00).</p>
-          <p class='day-1__text'>После выезд (вид транспорта зависит от величины группы) на базу отдыха в курортный
-            <span>поселок Паратунка.</span>
-          </p>
-          <p class='day-1__text'><b>Вечером</b>>, после прибытия на Камчатку всех участников (если рейсы разные),
-            <b>общая встреча</b>, проверка снаряжения, обсуждение программы завтрашнего дня.</p>
+          <div class='day-1__content'>
+            <p class='day-1__text'>С высоты птичьего полета вы увидите знаменитые «домашние» вулканы – Корякский,
+              Авачинский и Козельский. У выхода в аэропорту <b>вас встретят с табличкой «ДРИМ ТУР».</b></p>
+            <p class='day-1__text'><b>По пути в гостиницу сбор средств</b> с членов группы, инструктаж по программе этого
+              дня (бассейн с термальной водой, шашлык, знакомство с группой, алкоголь, фейерверк не раньше 20:00).</p>
+            <p class='day-1__text'>После выезд (вид транспорта зависит от величины группы) на базу отдыха в курортный
+              <a href='#'>поселок Паратунка.</a>
+            </p>
+            <p class='day-1__text'><b>Вечером</b>, после прибытия на Камчатку всех участников (если рейсы разные),
+              <b>общая встреча</b>, проверка снаряжения, обсуждение программы завтрашнего дня.
+            </p>
+          </div>
+          <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
           <div class='slider'>
             <ul class='slider__list'>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288'
+                  alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
+                <div class='slider__description-img'>
+                  <b>Паратунка</b>
+                  <p>Какой-то вспомогательный текст, в котором кратко описывается что на картинке.</p>
+                </div>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt='памятник из камня и плитки с надписью здесь начинается Россия, на котоором стоят два медведя, один большой с рыбой в зубах, один маленький'>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
               </li>
             </ul>
-            <div class='slider__buttons'>
-              <button class='slider__button slider__button--previous'>
+            <div class='slider-buttons'>
+              <button class='slider-buttons__btn slider-buttons__btn--previous' type='button' disabled>
                 <span class='visually-hidden'>перелеснуть слайдер назад</span>
               </button>
-              <button class='slider__button slider__button--next'>
+              <button class='slider-buttons__btn slider-buttons__btn--next' type='button'>
                 <span class='visually-hidden'>перелеснуть слайдер далее</span>
               </button>
             </div>
@@ -199,34 +214,39 @@
             <p class='day-2__text'>Сбор участников на Роуп Джамп для прыжков с высоты над водопадом. Заранее решаем кто
               прыгает.</p>
             <p class='day-2__text'>Выезд из отеля в 10.00. Переезд в верховья реки Паратунка к подножию вулкана
-              Вилючинский. Обзорная пешеходная экскурсия к водопаду Вилючинский. Термос с чаем, шоколад. Возвращение
+              Вилючинский. Обзорная пешеходная экскурсия к <a href='#'>водопаду Вилючинский</a>. Термос с чаем, шоколад. Возвращение
               назад.</p>
             <p class='day-2__text'>Обед. Купание в Верхне-Паратунских термальных источниках, расположенных на склоне
               сопки Горячая. </p>
             <p class='day-2__text'>Продолжительность – 6-8 часов. Трансфер в гостиницу.</p>
           </div>
-        </div>
+        <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
         <div class='slider'>
           <ul class='slider__list'>
             <li class='slider__item'>
-              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
+              <div class='slider__description-img'>
+                <b>Паратунка</b>
+                <p>Какой-то вспомогательный текст, в котором кратко описывается что на картинке.</p>
+              </div>
             </li>
             <li class='slider__item'>
-              <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt=''>
+              <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt='памятник из камня и плитки с надписью здесь начинается Россия, на котоором стоят два медведя, один большой с рыбой в зубах, один маленький'>
             </li>
             <li class='slider__item'>
-              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
             </li>
           </ul>
-          <div class='slider__buttons'>
-            <button class='slider__button slider__button--previous'>
+          <div class='slider-buttons'>
+            <button class='slider-buttons__btn slider-buttons__btn--dark slider-buttons__btn--previous' type='button' disabled>
               <span class='visually-hidden'>перелеснуть слайдер назад</span>
             </button>
-            <button class='slider__button slider__button--next'>
+            <button class='slider-buttons__btn slider-buttons__btn--dark slider-buttons__btn--next' type='button'>
               <span class='visually-hidden'>перелеснуть слайдер далее</span>
             </button>
           </div>
         </div>
+      </div>
       </section>
 
       <section class='expectations'>
@@ -234,28 +254,36 @@
           <h2 class='expectations__title'>На протяжении маршрута вас ожидает:</h2>
           <ul class='expectations__list'>
             <li class='expectations__item'>
-              <img class='expectations__img' src='img/index/expectations/picture-1.jpg' alt=''>
-              <h3 class='expectations__subtitle'>Аудиосопровождение</h3>
-              <p class='expectations__text'>Новый способ увидеть и услышать, то место, где вы находитесь. С помощью
-                аудиогида вы сможете совершить увлекательную экскурсию по городу.</p>
+              <img class='expectations__img' src='img/index/expectations/picture-1.jpg' width='288' height='182' alt=''>
+              <div class='expectations__wrapper-content'>
+                <h3 class='expectations__subtitle'>Аудиосопровождение</h3>
+                <p class='expectations__text'>Новый способ увидеть и услышать, то место, где вы находитесь. С помощью
+                  аудиогида вы сможете совершить увлекательную экскурсию по городу.</p>
+              </div>
             </li>
             <li class='expectations__item'>
-              <img class='expectations__img' src='img/index/expectations/picture-2.jpg' alt=''>
-              <h3 class='expectations__subtitle'>Разнообразное питание</h3>
-              <p class='expectations__text'>Каждый обед мы готовим с большой любовью. Кормим вас традиционными
-                камчатскими блюдами. Еда - залог хорошего отдыха!</p>
+              <img class='expectations__img' src='img/index/expectations/picture-2.jpg' width='288' height='182' alt=''>
+              <div class='expectations__wrapper-content'>
+                <h3 class='expectations__subtitle'>Разнообразное питание</h3>
+                <p class='expectations__text'>Каждый обед мы готовим с большой любовью. Кормим вас традиционными
+                  камчатскими блюдами. Еда - залог хорошего отдыха!</p>
+              </div>
             </li>
             <li class='expectations__item'>
-              <img class='expectations__img' src='img/index/expectations/picture-3.jpg' alt=''>
-              <h3 class='expectations__subtitle'>Безопасность на маршруте</h3>
-              <p class='expectations__text'>Наша команда проводит инструктаж, рассказывает как правильно себя вести, как
-                избежать опасных ситуаций.</p>
+              <img class='expectations__img' src='img/index/expectations/picture-3.jpg' width='288' height='182' alt=''>
+              <div class='expectations__wrapper-content'>
+                <h3 class='expectations__subtitle'>Безопасность на маршруте</h3>
+                <p class='expectations__text'>Наша команда проводит инструктаж, рассказывает как правильно себя вести, как
+                  избежать опасных ситуаций.</p>
+                </div>>
             </li>
             <li class='expectations__item'>
-              <img class='expectations__img' src='img/index/expectations/picture-4.jpg' alt=''>
-              <h3 class='expectations__subtitle'>Потрясающие фото</h3>
-              <p class='expectations__text'>Можете не переживать, что не успели сделать фото. Наш фотограф успевает
-                везде и за всеми. У вас будут самые лучшие фото!</p>
+              <img class='expectations__img' src='img/index/expectations/picture-4.jpg' width='288' height='182' alt=''>
+              <div class='expectations__wrapper-content'>
+                <h3 class='expectations__subtitle'>Потрясающие фото</h3>
+                <p class='expectations__text'>Можете не переживать, что не успели сделать фото. Наш фотограф успевает
+                  везде и за всеми. У вас будут самые лучшие фото!</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -274,28 +302,33 @@
               Обратный переход по тому же пути.</p>
             <p class='day-3__text'>Продолжительность: 8 часов. Трансфер в гостиницу.</p>
           </div>
-        </div>
+          <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
         <div class='slider'>
           <ul class='slider__list'>
             <li class='slider__item'>
-              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
+              <div class='slider__description-img'>
+                <b>Паратунка</b>
+                <p>Какой-то вспомогательный текст, в котором кратко описывается что на картинке.</p>
+              </div>
             </li>
             <li class='slider__item'>
-              <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt=''>
+              <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt='памятник из камня и плитки с надписью здесь начинается Россия, на котоором стоят два медведя, один большой с рыбой в зубах, один маленький'>
             </li>
             <li class='slider__item'>
-              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+              <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
             </li>
           </ul>
-          <div class='slider__buttons'>
-            <button class='slider__button slider__button--previous'>
+          <div class='slider-buttons slider-buttons--margin-none'>
+            <button class='slider-buttons__btn slider-buttons__btn--previous' type='button' disabled>
               <span class='visually-hidden'>перелеснуть слайдер назад</span>
             </button>
-            <button class='slider__button slider__button--next'>
+            <button class='slider-buttons__btn slider-buttons__btn--next' type='button'>
               <span class='visually-hidden'>перелеснуть слайдер далее</span>
             </button>
           </div>
         </div>
+      </div>
       </section>
 
       <section class='day-4'>
@@ -303,36 +336,42 @@
           <h2 class='day-4__title title-adventure-map'><b>День 4.</b> Экскурсия к подножию Авачинского вулкана</h2>
           <div class='day-4__content'>
             <p class='day-4__text'>Инструктаж по поведению группы в горах. Проверка снаряжения.Выезд на автомашине на
-              вулканическое плато (высота 900 м) к подножию Авачинского вулкана (2 часа).</p>
+              вулканическое плато (высота 900 м) к подножию <a href='#'>Авачинского вулкана</a> (2 часа).</p>
             <p class='day-4__text'>Пешеходная экскурсия к горе Верблюд, представляющую собой вулканическую экструзию.
               Находится в седловине между Корякским и Авачинским вулканами, относительная высота 100-150 м, ширина -
               около 100 м и по длине она протягивается на 500 м., состоит из трех сросшихся блоков.</p>
             <p class='day-4__text'>Обед. Поездка в Паратунку с купанием. </p>
             <p class='day-4__text'>Продолжительность – 8 часов. Трансфер в гостиницу.</p>
           </div>
+          <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
           <div class='slider'>
             <ul class='slider__list'>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-4/slider-photo-1.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-4/slider-photo-1.png' width='290' height='288' alt='частично заснеженная гора'>
+                <div class='slider__description-img'>
+                  <b>Паратунка</b>
+                  <p>Какой-то вспомогательный текст, в котором кратко описывается что на картинке.</p>
+                </div>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt='памятник из камня и плитки с надписью здесь начинается Россия, на котоором стоят два медведя, один большой с рыбой в зубах, один маленький'>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
               </li>
             </ul>
-            <div class='slider__buttons'>
-              <button class='slider__button slider__button--previous'>
+            <div class='slider-buttons'>
+              <button class='slider-buttons__btn slider-buttons__btn--previous' type='button' disabled>
                 <span class='visually-hidden'>перелеснуть слайдер назад</span>
               </button>
-              <button class='slider__button slider__button--next'>
+              <button class='slider-buttons__btn slider-buttons__btn--next' type='button'>
                 <span class='visually-hidden'>перелеснуть слайдер далее</span>
               </button>
             </div>
           </div>
         </div>
       </section>
+
 
       <section class='day-5'>
         <div class='day-5__container'>
@@ -341,35 +380,40 @@
             <p class='day-5__text'>Инструктаж по поведению группы при передвижении на плавсредствах, приему таблеток от
               морской болезни.</p>
             <p class='day-5__text'>Выезд на причал. Морская прогулка по Авачинской бухте. Осмотр панорамы города
-              Петропавловска-Камчатского, Авачинской губы и Авачинского залива. Маршрут пролегает мимо бухты Тихая,
+              Петропавловска&nbsp;-&nbsp;Камчатского, Авачинской губы и Авачинского залива. Маршрут пролегает мимо бухты Тихая,
               острова Бабушкин камень, мыса Станицкого, камней «Три брата». Увлекательная возможность донной рыбалки на
-              терпуга, ленка, камбалу у «Трех братьев», мыса Безымянный, у острова Старичков.</p>
+              терпуга, ленка, камбалу у «Трех братьев», мыса Безымянный, у <a href='#'>острова Старичков</a>.</p>
             <p class='day-5__text'>Осмотр птичьих базаров - смешанных колонии кайр, моевок и бакланов. Трансфер в
               гостиницу.</p>
             <p class='day-5__text'>Продолжительность 6 часов.</p>
           </div>
+          <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
           <div class='slider'>
             <ul class='slider__list'>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-5/slider-photo-1.png' width='288' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-5/slider-photo-1.png' width='288' height='288' alt='фото сделано со стороны моря, в дали виднеется суша'>
+                <div class='slider__description-img'>
+                  <b>Паратунка</b>
+                  <p>Какой-то вспомогательный текст, в котором кратко описывается что на картинке.</p>
+                </div>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-2.png' width='290' height='288' alt='памятник из камня и плитки с надписью здесь начинается Россия, на котоором стоят два медведя, один большой с рыбой в зубах, один маленький'>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
               </li>
             </ul>
-            <div class='slider__buttons'>
-              <button class='slider__button slider__button--previous'>
+            <div class='slider-buttons'>
+              <button class='slider-buttons__btn slider-buttons__btn--previous' type='button' disabled>
                 <span class='visually-hidden'>перелеснуть слайдер назад</span>
               </button>
-              <button class='slider__button slider__button--next'>
+              <button class='slider-buttons__btn slider-buttons__btn--next' type='button'>
                 <span class='visually-hidden'>перелеснуть слайдер далее</span>
               </button>
             </div>
           </div>
-        </div>
+
       </section>
 
       <section class='day-6'>
@@ -377,38 +421,45 @@
           <h2 class='day-6__title title-adventure-map'><b>День 6.</b> Берег Тихого океана, экскурсия по городу</h2>
           <div class='day-6__content'>
             <p class='day-6__text'>Поездка на берег Тихого океана, в район Халактырского пляжа. Прогулка. Обед в городе.
-              Обзорная экскурсия по г. Петропавловску-Камчатскому с посещением смотровых площадок. Рыбный рынок.</p>
+              Обзорная экскурсия по г. Петропавловску&nbsp;-&nbsp;Камчатскому с посещением смотровых площадок. Рыбный рынок.</p>
             <p class='day-6__text'>Продолжительность -5 часов. Трансфер в гостиницу.</p>
           </div>
           <h3 class='day-6__subtitle'>Дополнительные услуги</h3>
           <dl class='day-6__additional-services'>
             <dt><b>Серфинг</b></dt>
-            <dd>Прыжки с высоты над водопадом. Записываться заранее. </dd>
+            <dd>Прыжки с высоты над водопадом. Записываться заранее.</dd>
             <dt><b>SUP борды</b></dt>
-            <dd>Прыжки с высоты над водопадом. Записываться заранее. </dd>
+            <dd>Прыжки с высоты над водопадом. Записываться заранее.</dd>
           </dl>
+          <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
           <div class='slider'>
             <ul class='slider__list'>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-6/slider-photo-1.png' width='288' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-6/slider-photo-1.png' width='288' height='288' alt='серфингист в термо костюме и с веслом в руке подгоняемый волной'>
+                <div class='slider__description-img'>
+                  <b>Волновой SUP серфинг</b>
+                  <p>Какой-то вспомогательный текст, в котором кратко описывается что на картинке.</p>
+                </div>
               </li>
               <li class='slider__item'>
                 <img class='slider__img' src='img/index/day-6/slider-photo-2.png' width='285' height='282' alt=''>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
               </li>
             </ul>
-            <div class='slider__buttons'>
-              <button class='slider__button slider__button--previous'>
+            <div class='slider-buttons'>
+              <button class='slider-buttons__btn slider-buttons__btn--previous' type='button' disabled>
                 <span class='visually-hidden'>перелеснуть слайдер назад</span>
               </button>
-              <button class='slider__button slider__button--next'>
+              <button class='slider-buttons__btn slider-buttons__btn--next slider-buttons__btn--next-day-6' type='button'>
                 <span class='visually-hidden'>перелеснуть слайдер далее</span>
               </button>
             </div>
           </div>
         </div>
+        </div>
+
       </section>
 
       <section class='day-7'>
@@ -419,7 +470,7 @@
             <p class='day-7__text'>Экскурсия проводится в содружестве с «ВИТЯЗЬ-ТРЕВЕЛ», крупнейшим оператором
               вертолётных туров на Камчатке. Выезд в аэропорт «Витязь –Аэро». К вашим услугам –современный аэропортовый
               комплекс, включающий в себя удобный зал ожидания, кафетерий, сувенирный магазин.</p>
-            <p class='day-7__text'>Перелёт до Долины гейзеров занимает 1 час 10 минут. По пути, при благоприятных
+            <p class='day-7__text'>Перелёт до <a href='#'>Долины гейзеров</a> занимает 1 час 10 минут. По пути, при благоприятных
               условиях, вы осмотрите два действующих вулкана – Карымский и Малый Семячик из окон вертолёта. </p>
             <p class='day-7__text'>Перелёт и посадка в кальдере Узон. Кальдера образовалась в результате обрушения
               стенок древнего вулкана около 40 тысяч лет назад, на её дне очень ярко проявляется гидротермальная
@@ -427,29 +478,35 @@
             <p class='day-7__text'>Перелёт и посадка в Налычевской долине. Купание в горячих источниках. Здесь же вам
               предложат обед - горячее, чай и камчатский морс. Трансфер в гостиницу.</p>
           </div>
+          <h3 class='day-7__subtitle'>Дополнительные услуги</h3>
           <dl class='day-7__additional-services'>
             <dt><b>Роуп Джамп</b></dt>
             <dd>Прыжки с высоты над водопадом. Записываться заранее.</dd>
             <dt><b>Ледянки</b></dt>
             <dd>Прыжки с высоты над водопадом. Записываться заранее.</dd>
           </dl>
+          <!-- Должны быть изображения в формате jpg, но в макете картинки без формата png имеют белую рамку -->
           <div class='slider'>
             <ul class='slider__list'>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-7/slider-photo-1.png' width='288' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-7/slider-photo-1.png' width='288' height='288' alt='небольшой водоем окруженный сушей'>
+                <div class='slider__description-img'>
+                  <b>Название слайда</b>
+                  <p>Какой-то вспомогательный текст, в котором кратко описывается что на картинке.</p>
+                </div>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-7/slider-photo2.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-7/slider-photo-2.png' width='290' height='288' alt='долина гейзеров'>
               </li>
               <li class='slider__item'>
-                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt=''>
+                <img class='slider__img' src='img/index/day-1/slider-photo-1.png' width='290' height='288' alt='на переднем плане мужчина смотрит на горный хребет, а за ним видна гора покрытая частично снегом'>
               </li>
             </ul>
-            <div class='slider__buttons'>
-              <button class='slider__button slider__button--previous'>
+            <div class='slider-buttons'>
+              <button class='slider-buttons__btn slider-buttons__btn--dark slider-buttons__btn--previous' type='button' disabled>
                 <span class='visually-hidden'>перелеснуть слайдер назад</span>
               </button>
-              <button class='slider__button slider__button--next'>
+              <button class='slider-buttons__btn slider-buttons__btn--dark slider-buttons__btn--next' type='button'>
                 <span class='visually-hidden'>перелеснуть слайдер далее</span>
               </button>
             </div>
@@ -461,13 +518,11 @@
         <div class='day-8__container'>
           <h2 class='day-8__title title-adventure-map'><b>День 8.</b> Отъезд с Камчатки. Трансфер в аэропорт</h2>
           <div class='day-8__content'>
-            <p class='day-8__text'>Заезд на рынок, прощальное посещение «медведей», фото на память. Возвращайтесь
+            <p>Заезд на рынок, прощальное посещение «медведей», фото на память. Возвращайтесь
               следующим летом!</p>
           </div>
         </div>
       </section>
-
-    </div>
 
     <section class='price'>
       <div class='price__container'>
@@ -484,7 +539,7 @@
           <a class='price__link-send' href='#'>Отправить заявку</a>
           <ul class='include'>
             <li class='include__item'>
-              <h3 class='include__title'>В стоимость входит</h3>
+              <h3 class='include__title include__title--include'>В стоимость входит</h3>
               <ul class='include__list'>
                 <li class='include__subitem'>встреча и проводы в аэропорту</li>
                 <li class='include__subitem'>питание: обеды во время экскурсий</li>
@@ -494,7 +549,7 @@
               </ul>
             </li>
             <li class='include__item'>
-              <h3 class='include__title'>За дополнительную плату</h3>
+              <h3 class='include__title include__title--additional'>За дополнительную плату</h3>
               <ul class='include__list'>
                 <li class='include__subitem'>вертолётная экскурсия в Долину Гейзеров и кальдеру Узона, оплачивается в
                   день вылета</li>
@@ -505,25 +560,31 @@
               </ul>
             </li>
           </ul>
-          <div class='price__links'>
-            <a class='price__link' href='#'>Информация о бронях</a>
-            <a class='price__link' href='#'>Важная информация</a>
-            <a class='price__link' href='#'>Условия договора и возврата</a>
-          </div>
+          <ul class='price__list-links'>
+            <li class='price__item'>
+              <a class='price__link' href='#'>Информация о бронях</a>
+            </li>
+            <li class='price__item'>
+              <a class='price__link' href='#'>Важная информация</a>
+            </li>
+            <li class='price__item'>
+              <a class='price__link' href='#'>Условия договора и возврата</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <div>
-      <section class='request'>
-        <div class='request__container'>
-          <h2 class='request__title'>Онлайн-заявка</h2>
-          <ul class='social'>
+
+      <section class='application'>
+        <div class='application__container'>
+          <h2 class='application__title'>Онлайн-заявка</h2>
+          <ul class='social application__social'>
             <li class='social__item'>
               <a class='social__link' href='#'>
                 <span class='visually-hidden'>Мы в Инстаграм</span>
-                <svg class='social__icon' width='23' height='23'>
-                  <use href='img/sprite.svg#icon-facebook'></use>
+                <svg class='social__icon social__icon--instagram' width='23' height='23'>
+                  <use class='qwerty' href='img/sprite.svg#icon-instagram'></use>
                 </svg>
               </a>
             </li>
@@ -531,7 +592,7 @@
               <a class='social__link' href='#'>
                 <span class='visually-hidden'>Мы в Фейсбук</span>
                 <svg class='social__icon' width='24' height='23'>
-                  <use href='img/sprite.svg#icon-twitter'></use>
+                  <use href='img/sprite.svg#icon-facebook'></use>
                 </svg>
               </a>
             </li>
@@ -539,62 +600,75 @@
               <a class='social__link' href='#'>
                 <span class='visually-hidden'>Мы в Контакте</span>
                 <svg class='social__icon' width='30' height='30'>
-                  <use href='img/sprite.svg#icon-instagram'></use>
+                  <use href='img/sprite.svg#icon-vkontakte'></use>
                 </svg>
               </a>
             </li>
           </ul>
-          <form class='request__form' action='#' method='post'>
-            <fieldset>
-              <legend>Имя участника</legend>
-              <input type='text' id='name' name='name' placeholder='Имя' required>
+          <form class='application__form' action='#' method='post'>
+            <fieldset class='application__fieldset'>
+              <legend class='application__legend'>Имя участника</legend>
+              <input class='application__input application__input--name' type='text' id='name' name='name' placeholder='Имя' required>
             </fieldset>
-            <fieldset>
-              <legend>Количество человек</legend>
-              <input type='number' id='amount' name='name' placeholder='1' required>
-              <button class='request__btn' type='button'>
+            <fieldset class='application__fieldset'>
+              <legend class='application__legend'>Количество человек</legend>
+              <input class='application__input application__input--amount' type='number' id='amount' name='name' placeholder='1' required>
+              <div class='application__wrapper__btn'>
+              <button class='application__btn application__btn--less' type='button'>
                 <span class='visually-hidden'>уменьшить количество человек</span>
               </button>
-              <button class='request__btn' type='button'>
+              <button class='application__btn application__btn--more' type='button'>
                 <span class='visually-hidden'>увеличить количество человек</span>
               </button>
+            </div>
             </fieldset>
-            <fieldset>
-              <legend>Тариф</legend>
-              <input type='radio' name='rate' id='base'>
-              <label for='base'>Базовый (для камчадал) <b>79 000 руб</b></label>
-              <input type='radio' name='rate' id='medium' checked>
-              <label for='medium'>Базовый + проживание <b>99 000 руб</b></label>
-              <input type='radio' name='rate' id='pro'>
-              <label for='pro'>Базовый + проживание + долина гейзеров <b>179 000 руб</b></label>
+            <fieldset class='application__fieldset application__rate-fieldset'>
+              <legend class='application__legend'>Тариф</legend>
+              <ul class='application__rate-list'>
+                <li class='application__rate-item'>
+                  <input class='application__rate-radio visually-hidden' type='radio' name='rate' id='base'>
+                  <label class='application__rate-label' for='base'>Базовый (для камчадал)</label>
+                  <b class='application__rate-coust'>79 000 руб</b>
+                </li>
+                <li class='application__rate-item'>
+                  <input class='application__rate-radio visually-hidden' type='radio' name='rate' id='medium' checked>
+                  <label class='application__rate-label' for='medium'>Базовый + проживание</label>
+                  <b class='application__rate-coust'>99 000 руб</b>
+                </li>
+                <li class='application__rate-item'>
+                  <input class='application__rate-radio visually-hidden' type='radio' name='rate' id='pro'>
+                  <label class='application__rate-label' for='pro'>Базовый + проживание + долина гейзеров</label>
+                  <b class='application__rate-coust'>179 000 руб</b>
+                </li>
+              </ul>
             </fieldset>
-            <fieldset>
-              <legend>Даты тура</legend>
+            <fieldset class='application__fieldset application__date-fieldset'>
+              <legend class='application__legend'>Даты тура</legend>
               <label class='visually-hidden'>выбрать даты поездки</label>
-              <input type='text' id='date' placeholder='23.06 - 04.07' required>
+              <input class='application__input application__input--date' type='text' id='date' placeholder='23.06 - 04.07' required>
             </fieldset>
-            <fieldset>
-              <legend>Комментарий</legend>
-              <label class='visually-hidden' for='message'>поле для ввода комментария</label>
-              <textarea name='message' id='message' cols='20' rows='1'
-                placeholder='Напишите ваш комментарий'></textarea>
+            <fieldset class='application__fieldset application__comment-fieldset'>
+              <legend class='application__legend'>Комментарий</legend>
+              <label class='visually-hidden' for='comment'>поле для ввода комментария</label>
+              <textarea class='application__comment' name='comment' id='comment' rows='2' cols='1' placeholder='Напишите ваш комментарий здесь'></textarea>
             </fieldset>
-            <button class='request__btn' type='submit'>Отправить заявку</button>
+            <button class='application__btn-send' type='submit' disabled>Отправить заявку</button>
           </form>
         </div>
       </section>
+
       <section class='subscribe'>
         <div class='subscribe__container'>
           <h2 class='subscribe__title'>Что нужно знать отправляясь на Камчатку?</h2>
           <p class='subscribe__text'>Получите памятку туриста просто оставив свой e-mail.</p>
-          <form class='subscribe__from' action='post'>
+          <form class='subscribe__form' action='post'>
             <label class='visually-hidden' for='email'>поле для ввода почты</label>
             <input type='email' id='email' name='email' placeholder='Ваш e-mail'>
             <button class='subscribe__btn' type='submit'>Получить</button>
           </form>
         </div>
       </section>
-    </div>
+
 
     <section class='team'>
       <div class='team__container'>
@@ -602,31 +676,32 @@
         <p class='team__text'>Наша команда - это люди влюбленные в свою работу. Каждый из них обладает проффесиональными
           знаниями, хорошей физической подготовкой. Следят за вашей безпасностью в туре, и тем чтобы каждый из вас
           получил максимальное колличество эмоций.</p>
-      </div>
+
       <div class='slider'>
         <ul class='slider__list'>
-          <li class='slider__item'>
-            <img class='slider__img' src='img/index/team/alina-goncharova.jpg' width='289' height='383' alt=''>
+          <li class='slider__item slider__item--profile-info'>
+            <img class='slider__img' src='img/index/team/alina-goncharova.jpg' width='289' height='383' alt='Алина Гончарова'>
             <cite>Алина Гончарова, <a class='slider__link-social' href='#'>@alin_och</a></cite>
           </li>
-          <li class='slider__item'>
-            <img class='slider__img' src='img/index/team/evgeny-barsukov.jpg' width='289' height='383' alt=''>
+          <li class='slider__item slider__item--profile-info'>
+            <img class='slider__img' src='img/index/team/evgeny-barsukov.jpg' width='289' height='383' alt='Евгений Барсуков'>
             <cite>Евгений Барсуков, <a class='slider__link-social' href='#'>@eugen_eugen</a></cite>
           </li>
-          <li class='slider__item'>
-            <img class='slider__img' src='img/index/team/dmitriy-osipov.jpg' width='289' height='383' alt=''>
+          <li class='slider__item slider__item--profile-info'>
+            <img class='slider__img' src='img/index/team/dmitriy-osipov.jpg' width='289' height='383' alt='Дмитрий Осипов'>
             <cite>Дмитрий Осипов, <a class='slider__link-social' href='#'>@dim_os</a></cite>
           </li>
         </ul>
-        <div class='slider__buttons'>
-          <button class='slider__button slider__button--previous'>
+        <div class='slider-buttons'>
+          <button class='slider-buttons__btn slider-buttons__btn--dark slider-buttons__btn--previous' type='button' disabled>
             <span class='visually-hidden'>перелеснуть слайдер назад</span>
           </button>
-          <button class='slider__button slider__button--next'>
+          <button class='slider-buttons__btn slider-buttons__btn--dark slider-buttons__btn--next' type='button'>
             <span class='visually-hidden'>перелеснуть слайдер далее</span>
           </button>
         </div>
       </div>
+    </div>
     </section>
   </main>
 
@@ -649,50 +724,78 @@
                 <a class='navigation-footer__link' href='#'>Как записаться</a>
               </li>
               <li class='navigation-footer__item'>
-                <a class='navigation-footer__link' href='#'>Как записаться</a>
+                <a class='navigation-footer__link' href='#'>Команда</a>
               </li>
             </ul>
           </nav>
         </div>
+        <div class='footer__wrapper footer__wrapper--subscribe'>
+          <p class='footer__subscribe-text'>@dreamkamtour</p>
+          <a class='footer__subscribe-link' href=''>Подписаться</a>
+          <ul class='footer__subscribe-list-images'>
+            <li class='footer__subscribe-item-images'>
+              <img src='img/index/footer/photo-1.jpg' srcset='img/index/footer/photo-1@2x.jpg 2x' width='91' height='97' alt='белый автобус'>
+            </li>
+            <li class='footer__subscribe-item-images'>
+              <img src='img/index/footer/photo-2.jpg' srcset='img/index/footer/photo-2@2x.jpg 2x' width='91' height='97' alt='морской котик'>
+            </li>
+            <li class='footer__subscribe-item-images'>
+              <img src='img/index/footer/photo-3.jpg' srcset='img/index/footer/photo-3@2x.jpg 2x' width='91' height='97' alt='колонна тристических автомобилей'>
+            </li>
+            <li class='footer__subscribe-item-images'>
+              <img src='img/index/footer/photo-4.jpg' srcset='img/index/footer/photo-4@2x.jpg 2x' width='91' height='97' alt='человек прыгает на тарзанке со скалы'>
+            </li>
+            <li class='footer__subscribe-item-images'>
+              <img src='img/index/footer/photo-3.jpg' srcset='img/index/footer/photo-3@2x.jpg 2x' width='91' height='97' alt='колонна тристических автомобилей'>
+            </li>
+            <li class='footer__subscribe-item-images'>
+              <img src='img/index/footer/photo-1.jpg' srcset='img/index/footer/photo-1@2x.jpg 2x' width='91' height='97' alt='Белый автобус'>
+            </li>
+          </ul>
+        </div>
         <div class='footer__wrapper footer__wrapper--video'>
-          <img src='img/index/footer/video.png' srcset='img/index/footer/video@2x.png 2x' alt=''>
-          <p class='footer__text'>Смотрите видео отзывы наших клиентов</p>
-          <a class='footer__link' href=''>Перейти в Instagram</a>
+          <img class='footer__video-img' src='img/index/footer/video.jpg' srcset='img/index/footer/video@2x.jpg 2x' width='63' height='102' alt=''>
+          <div>
+            <h2 class='footer__video-title'>Смотрите видео отзывы наших клиентов</h2>
+            <a class='footer__video-link' href='#'>Перейти в Instagram</a>
+          </div>
         </div>
         <div class='footer__wrapper footer__wrapper--social'>
-          <h2 class='footer__title'>Социальные сети</h2>
-          <ul class='social'>
+          <h2 class='footer__social-title'>Социальные сети</h2>
+          <ul class='social social-footer'>
             <li class='social__item'>
               <a class='social__link' href='#'>
                 <span class='visually-hidden'>Мы в инстаграм</span>
-                <svg class='social__icon' width='19' height='20'>
-                  <use href='img/sprite.svg#icon-instagram'></use>
+                <svg class='social__icon social__icon-footer' width='19' height='20'>
+                  <use href='img/sprite.svg#icon-instagram-footer'></use>
                 </svg>
               </a>
             </li>
             <li class='social__item'>
               <a class='social__link' href='#'>
                 <span class='visually-hidden'>Мы в фейсбук</span>
-                <svg class='social__icon' width='21' height='22'>
-                  <use href='img/sprite.svg#icon-facebook'></use>
+                <svg class='social__icon social__icon-footer' width='21' height='22'>
+                  <use href='img/sprite.svg#icon-facebook-footer'></use>
                 </svg>
               </a>
             </li>
             <li class='social__item'>
               <a class='social__link' href='#'>
                 <span class='visually-hidden'>Мы в контакте</span>
-                <svg class='social__icon' width='24' height='24'>
-                  <use href='img/sprite.svg#icon-vk'></use>
+                <svg class='social__icon social__icon-footer' width='24' height='24'>
+                  <use href='img/sprite.svg#icon-vk-footer'></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class='footer__wrapper footer__wrapper--contacts'>
-          <a class='footer__phone' href='tel:87603542323'>+ 7 (760) 354-23-23</a>
-          <span class='footer__mode'>Работаем с 9:00 до 18:00</span>
-          <a class='footer__email' href='#'>info@dreamkamtour.ru</a>
-          <address class='footer__address'>ул. Рубиннштерна, 4</address>
+          <a class='footer__phone' href='tel:77603542323'>+ 7 (760) 354-23-23</a>
+          <p class='footer__mode'>Работаем с 9:00 до 18:00</p>
+          <a class='footer__email' href='mailto:info@dreamkamtour.ru'>info@dreamkamtour.ru</a>
+          <a href='https://goo.gl/maps/hAvXjFXit74FkeNN9' target='_blank'>
+            <address class='footer__address'>ул. Рубиннштерна, 41</address>
+          </a>
         </div>
       </div>
       <p class='footer__copyright'>2021 © Dreamkam Tour</p>

@@ -1,0 +1,33 @@
+.day-1 {
+  min-height: 1200px;
+
+  color: #acacac;
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 49px;
+    padding-bottom: 56px;
+
+    background: #000000 url('../img/index/day-1/bg-day-1.jpg') no-repeat;
+    background-size: 1587px 1214px;
+    background-position: -372px 0;
+  }
+  &__content {
+    margin-bottom: 56px;
+  }
+  &__text {
+    margin-bottom: 24px;
+    & > a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    & > b {
+      color: $second-color-text;
+    }
+  }
+}

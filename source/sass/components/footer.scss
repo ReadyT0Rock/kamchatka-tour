@@ -6,8 +6,155 @@
     width: $mobile-width;
     min-height: inherit;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 48px 16px 19px;
 
-    background-color: #000000;
+    background-color: #212121;
+    & > div {
+      border-bottom: 2px solid #363636;
+    }
+  }
+  &__wrapper {
+    &--subscribe {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    &--video {
+      display: flex;
+      width: 308px;
+      margin-bottom: 49px;
+    }
+    &--social {
+      margin-bottom: 41px;
+    }
+  }
+  &__logo {
+    display: block;
+    margin-bottom: 34px;
+  }
+  &__video {
+    &-img {
+      margin-right: 18px;
+
+      border-radius: 9px;
+    }
+    &-title {
+      display: block;
+      width: 227px;
+      margin-bottom: 6px;
+
+      font-family: $font-montserrat;
+      @include font(16px, 24px, 600);
+    }
+    &-link {
+      width: 227px;
+
+      color: #bababa;
+    }
+  }
+  &__subscribe-text {
+    width: 153px;
+    margin-bottom: 16.4px;
+    padding-top: 7px;
+
+    font-family: $font-montserrat;
+    @include font(14px, 28px, 700);
+    color: #bababa;
+  }
+  &__subscribe-link {
+    display: block;
+    width: 134.5px;
+    min-height: 42.5px;
+    padding-top: 7.5px;
+    margin-bottom: 16.4px;
+
+    font-size: 14px;
+    text-align: center;
+
+    border: 1px solid $main-color-bg;
+    border-radius: 5px;
+  }
+  &__subscribe-list-images {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 97px);
+    grid-gap: 7px;
+  }
+  &__social-title {
+    margin-bottom: 8px;
+
+    font-family: $font-montserrat;
+    @include font(16px, 24px, 600);
+  }
+  &__phone {
+    font-family: $font-montserrat;
+    @include font(20px, 32px, 700);
+  }
+  &__mode {
+    margin-bottom: 34px;
+
+    font-family: $font-montserrat;
+    @include font(14px, 32px, 400);
+    color: #bababa;
+  }
+  &__email {
+    position: relative;
+
+    display: block;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 1px;
+      top: 5px;
+
+      width: 16px;
+      height: 16px;
+
+      background: url('../img/index/footer/mail.svg') no-repeat;
+    }
+  }
+  &__address {
+    position: relative;
+
+    margin-bottom: 55px;
+    padding-left: 25px;
+
+    font-style: normal;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0px;
+      top: 5px;
+
+      width: 16px;
+      height: 16px;
+
+      background: url('../img/index/footer/location.svg') no-repeat;
+    }
+  }
+  &__copyright {
+    min-height: 60px;
+    padding-top: 24px;
+
+    font-size: 14px;
+  }
+}
+
+.navigation-footer {
+  &__list {
+    margin-bottom: 48px;
+
+    color: #bababa;
+  }
+  &__item {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__icon-footer:hover {
+    stroke: #f47648;
   }
 }
