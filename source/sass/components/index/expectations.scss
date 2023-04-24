@@ -1,0 +1,41 @@
+.expectations {
+  min-height: 2013px;
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 40px 16px 41px;
+    background-color: #f1f1f1;
+  }
+  &__title {
+    margin-bottom: 32px;
+
+    font-family: $font-montserrat;
+    @include font(32px, 40px, 700);
+    color: #000000;
+  }
+  &__item {
+    width: 288px;
+    min-height: 420px;
+
+    background-color: $main-color-bg;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .1);
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  &__wrapper-content {
+    min-height: 100%;
+    padding: 29px 24px;
+  }
+  &__subtitle {
+    margin-bottom: 7px;
+
+    font-family: $font-montserrat;
+    @include font(18px, 24px, 700);
+  }
+  &__text {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,25 @@
+.social {
+  display: none;
+  &__icon {
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.social-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 96px;
+}
+
+@media (min-width: $tablet-width) {
+ .social {
+  display: block;
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      width: 96px;
+    }
+  }
+}

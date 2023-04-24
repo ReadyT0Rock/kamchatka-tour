@@ -1,0 +1,34 @@
+.adventure-map {
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.title-adventure-map {
+  margin-bottom: 24px;
+
+  font-family: $font-montserrat;
+  @include font(24px, 32px, 700);
+  color: $second-color-text;
+  & b {
+    color: #f47648;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .adventure-map {
+    width: $tablet-width;
+  }
+  .title-adventure-map {
+    margin-bottom: 38px;
+
+    @include font(40px, 50px, 700);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .adventure-map {
+    width: $desktop-width;
+    min-height: 7372px;
+  }
+}
+

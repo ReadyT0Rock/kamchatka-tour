@@ -1,0 +1,81 @@
+.subscribe {
+  min-height: 1129px;
+  margin-top: -252px;
+  margin-bottom: 48px;
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px 54px;
+
+    background: #000000 url('../img/index/subscribe/background-mobile.jpg') no-repeat;
+    background-size: 320px auto;
+    background-position: left top;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 412px;
+
+      width: 144px;
+      height: 214px;
+
+      background: url('../img/index/subscribe/magazine-mobile.png') no-repeat;
+      background-size: 144px 214px;
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+
+    font-family: $font-montserrat;
+    @include font(32px, 40px, 700);
+    color: $second-color-text
+  }
+  &__text {
+    margin-bottom: 30px;
+
+    color: $second-color-text;
+  }
+  &__form {
+    & input {
+      width: 100%;
+      min-height: 40px;
+      padding: 10px;
+      margin-bottom: 24px;
+
+      color: $second-color-text;
+
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid $main-color-bg;
+      &::placeholder {
+        font-size: 20px;
+        color: #999999;
+      }
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $main-color-bg;
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 0;
+
+    color: $second-color-text;
+    text-align: center;
+
+    background-color: #f47648;
+    border: 0;
+    border-radius: 5px;
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}

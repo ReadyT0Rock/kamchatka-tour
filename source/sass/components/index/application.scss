@@ -1,0 +1,233 @@
+.application {
+  min-height: 854px;
+  &__container {
+    width: $mobile-width;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: $font-montserrat;
+    @include font(32px, 40px, 700);
+  }
+  &__form {
+    position: relative;
+    z-index: 2;
+  }
+  &__legend {
+    font-size: 14px;
+
+    margin-bottom: 13px;
+  }
+  &__fieldset {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 24px;
+
+    border: 0;
+  }
+  &__input {
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 9px 13px 9px ;
+
+    border: none;
+    border-bottom: 1px solid #212121;
+
+    &[type=number]::-webkit-outer-spin-button,
+    &[type=number]::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+    &::placeholder {
+      font-size: 20px;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid #212121;
+    }
+    &--amount {
+      padding-right: 80px;
+    }
+    &--date {
+      padding-bottom: 5px;
+      &::placeholder {
+        color: #212121;
+      }
+    }
+  }
+  &__wrapper__btn {
+    position: absolute;
+    top: 13px;
+    right: 3px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+  }
+  &__btn {
+    position: relative;
+
+    width: 17.6px;
+    height: 16px;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    &--less::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $third-color-bg;
+      border-radius: 5px;
+    }
+    &--more::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $third-color-bg;
+      border-radius: 5px;
+    }
+    &--more::after{
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $third-color-bg;
+      border-radius: 5px;
+
+      transform: rotate(90deg);
+    }
+  }
+  &__rate {
+    &-fieldset {
+      margin-bottom: 19px;
+    }
+    &-fieldset > legend {
+      margin-bottom: 23px;
+    }
+    &-item {
+      position: relative;
+
+      padding-left: 27px;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+    &-label {
+      display: block;
+      margin-bottom: 8px;
+
+      font-size: 18px;
+    }
+    &-radio + .application__rate-label::before {
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 1px;
+
+      width: 16px;
+      height: 16px;
+
+      border: 1px solid $third-color-bg;
+      border-radius: 50%;
+
+      cursor: pointer;
+    }
+    &-radio:checked + .application__rate-label::after{
+      position: absolute;
+      content: '';
+      top: 7px;
+      left: 3px;
+
+      width: 12px;
+      height: 12px;
+
+      background-color: $third-color-bg;
+      border-radius: 50%;
+
+      cursor: pointer;
+    }
+    &-coust {
+      @include font(20px, 24px, 700);
+    }
+  }
+  &__date-fieldset {
+      position: relative;
+      & > legend {
+        margin-bottom: 8px;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        top: 8px;
+        right: -2px;
+
+        width: 28px;
+        height: 24px;
+
+        background: url('../img/index/application/calendar.svg') no-repeat;
+        background-size: 28px 24px;
+      }
+
+  }
+  &__comment-fieldset {
+    margin-bottom: 34px;
+  }
+  &__comment {
+    width: 100%;
+    min-height: 63px;
+    padding: 10px;
+    padding-top: 3px;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #212121;
+    resize: none;
+    &::placeholder {
+      font-size: 20px;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid #212121;
+    }
+  }
+  &__btn-send {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 86px;
+
+    background-color: #f47648;
+    border: 0;
+
+    color: $second-color-text;
+    text-align: center;
+
+    border-radius: 5px;
+    &:active {
+      opacity: 0.6;
+    }
+    &:disabled {
+      opacity: 0.7;
+
+      cursor: auto;
+    }
+  }
+}

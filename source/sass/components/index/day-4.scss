@@ -1,0 +1,48 @@
+.day-4 {
+  min-height: 1151px;
+  &__container {
+    position: relative;
+
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 104px 16px 40px;
+
+    background-color: #000000;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -104px;
+
+      width: 329px;
+      height: 278px;
+
+      background: url('../../../img/index/day-4/background-mobile.png') no-repeat;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: $font-montserrat;
+    @include font(24px, 32px, 700);
+    color: $second-color-text;
+  }
+  &__content {
+    margin-bottom: 24px;
+
+    color: #acacac;
+  }
+  &__text {
+    & > a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}

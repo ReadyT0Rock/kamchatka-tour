@@ -1,12 +1,141 @@
 .info {
-  min-height: 1451px;
+  min-height: 1390px;
+  padding-top: 48px;
   &__container {
     width: $mobile-width;
-    min-height: inherit;
+    min-height: 1390px;
     margin: 0 auto;
     padding: 0 16px;
 
     background: url('../img/index/info/bg-mobile.jpg') no-repeat;
     background-position: left bottom;
+  }
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: $font-montserrat;
+    @include font(32px, 40px, 700);
+  }
+  &__content p:first-child {
+    margin-bottom: 16px;
+
+    @include font(20px, 32px, 400);
+  }
+  &__content p:last-child {
+    margin-bottom: 62px;
+  }
+  &__description {
+    display: inline-block;
+    margin-bottom: 19px;
+
+    font-family: $font-montserrat;
+    @include font(20px, 32px, 600);
+    color: $second-color-text;
+  }
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(2, 145px);
+  grid-template-rows: repeat(2, 133px);
+  margin-bottom: 192px;
+  &__item {
+    padding-top: 40px;
+    &--difficulty {
+      background: url('../img/icon/difficulty.svg') no-repeat;
+    }
+    &--period {
+      background: url('../img/icon/period.svg') no-repeat;
+    }
+    &--duration {
+      background: url('../img/icon/duration.svg') no-repeat;
+    }
+    &--accommodation {
+      background: url('../img/icon/accommodation.svg') no-repeat;
+    }
+  }
+  &__title {
+    font-family: $font-montserrat;
+    font-weight: 400;
+  }
+  &__description {
+    font-weight: 700;
+  }
+}
+
+.blockquote {
+  margin: 0;
+  &__blockquote {
+    width: 280px;
+    margin: 0;
+    margin-bottom: 11px;
+
+    @include font(16px, 19px, 300);
+    color: #dedede;
+  }
+  &__author-name {
+    @include font(16px, 19px, 400);
+    font-style: normal;
+    color: $second-color-text;
+  }
+  &__author-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .info {
+    padding-top: 64px;
+    min-height: 1178px;
+    &__container {
+      width: $tablet-width;
+      min-height: inherit;
+      padding: 0 40px;
+
+      background: url('../img/index/info/bg-tablet.jpg') no-repeat;
+      background-position: 0px 195px;
+    }
+    &__title {
+      margin-bottom: 27px;
+
+      @include font(48px, 56px, 700);
+    }
+    &__content p:first-child {
+      width: 571px;
+      margin-bottom: 35px;
+
+      font-size: 24px;
+    }
+    &__content p:last-child {
+      width: 597px;
+      margin-bottom: 62px;
+    }
+    &__description {
+      width: 662px;
+      margin-bottom: 33px;
+
+      font-size: 24px;
+    }
+  }
+
+  .advantages {
+    grid-template-columns: repeat(4, 171.5px);
+    grid-template-rows: none;
+    grid-gap: 14px;
+    margin-bottom: 322px;
+  }
+
+  .blockquote {
+    width: 305px;
+    &__blockquote {
+      width: 305px;
+    }
+    &__author-link:hover {
+      color: #f47648;
+    }
   }
 }

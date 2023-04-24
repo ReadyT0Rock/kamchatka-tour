@@ -1,0 +1,49 @@
+.day-2 {
+  position: relative;
+
+  min-height: 1389px;
+
+  color: $main-color-text;
+
+  &__container {
+    position: relative;
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 21px;
+
+    background: url('../img/index/day-2/background.jpg') no-repeat;
+    background-position: 0 390px;
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 24px;
+
+    color: #212121;
+  }
+  &__content {
+    margin-bottom: 24px;
+  }
+  &__text {
+    & > a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    &:nth-child(1) {
+      margin-bottom: 23px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 178px;
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-bottom: 24px;
+    }
+  }
+}

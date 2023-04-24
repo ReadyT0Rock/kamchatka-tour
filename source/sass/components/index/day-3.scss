@@ -1,0 +1,27 @@
+.day-3 {
+  min-height: 1048px;
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 48px 16px;
+
+    background: url('../img/index/day-3/background-mobile.jpg') no-repeat;
+    background-position-y: bottom;
+  }
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: $font-montserrat;
+    @include font(24px, 32px, 700);
+    color: #212121;
+  }
+  &__content {
+    margin-bottom: 24px;
+
+    color: #212121;
+  }
+  &__text:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}

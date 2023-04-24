@@ -14,6 +14,8 @@
 
     background: url('../img/index/promo/background.jpg') no-repeat;
     background-size: cover;
+
+    overflow: hidden;
   }
   &__title {
     margin-bottom: 24px;
@@ -59,6 +61,7 @@
       height: 48px;
 
       background: url('../../../img/icon/arrow-diagonally.svg') no-repeat;
+      background-size: 48px 48px;
     }
     &:active,
     &:active::before {
@@ -82,18 +85,54 @@
 
 @media (min-width: $tablet-width) {
   .promo {
+    min-height: 868px;
     &__container {
       width: $tablet-width;
+      padding: 163px 40px 42px;
+    }
+    &__title {
+      @include font(64px, 64px, 900);
+    }
+    &__data {
+      width: 481px;
+      min-height: 61px;
+      padding: 2px 24px;
+      margin-bottom: 34px;
+
+      @include font(30px, 56px, 700);
+    }
+    &__text {
+      width: 384px;
+      margin-bottom: 38px;
+
+      font-size: 20px;
+    }
+    &__link {
+      margin-bottom: 76px;
+      &::before {
+        top: -21px;
+        left: 160px;
+
+        width: 64px;
+        height: 64px;
+
+        background-size: 64px 64px;
+      }
     }
     &__link:hover,
-    &__link::before {
+    &__link:hover::before {
       opacity: 0.8;
     }
-    & svg {
-      fill: #dfdfdf;
-      &:hover {
-        fill: #f47648;
-      }
+    &__link:active,
+    &__link:active::before {
+      opacity: 0.5;
+    }
+    &__social-list {
+      width: 74px;
+      margin-right: 9px;
+    }
+    &__social-icon:hover {
+      fill: #f47648;
     }
   }
 }

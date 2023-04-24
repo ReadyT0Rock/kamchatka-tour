@@ -1,0 +1,55 @@
+.day-5 {
+  min-height: 1024px;
+  margin-bottom: 48px;
+  &__container {
+    position: relative;
+
+    width: $mobile-width;
+    margin: 0 auto;
+    padding: 6px 16px 0;
+
+    background-color: #000000;
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 320px;
+      height: 2178px;
+
+      background: url('../img/index/day-5/background.jpg') no-repeat;
+      background-size: 320px 2178px;
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 24px;
+
+    font-family: $font-montserrat;
+    @include font(24px, 30px, 700);
+    color: $second-color-text;
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 24px;
+
+    color: $second-color-text;
+  }
+  &__text {
+    & > a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}

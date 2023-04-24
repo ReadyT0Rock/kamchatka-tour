@@ -1,0 +1,67 @@
+.day-1 {
+  position: relative;
+  min-height: 1200px;
+
+  color: #acacac;
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -89px;
+    left: 0;
+
+    width: 320px;
+    height: 166px;
+
+    background: url('../img/bg-decorate-tablet-and-mobile-version.png') no-repeat;
+    background-size: 320px 166px;
+  }
+  &__container {
+    width: $mobile-width;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 49px;
+    padding-bottom: 56px;
+
+    background: #000000 url('../img/index/day-1/bg-day-1.jpg') no-repeat;
+    background-size: 1587px 1214px;
+    background-position: -372px 0;
+  }
+  &__content {
+    margin-bottom: 56px;
+  }
+  &__text {
+    margin-bottom: 24px;
+    & a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:active {
+        opacity: 0.6;
+      }
+    }
+    & b {
+      color: $second-color-text;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .day-1 {
+    min-height: 957px;
+    &__container {
+      width: $tablet-width;
+      min-height: inherit;
+      padding: 0 40px;
+
+      overflow: hidden;
+    }
+    &__content {
+      margin-bottom: 48px;
+    }
+    &__text {
+      & a:hover {
+        color: #f47648;
+      }
+    }
+  }
+}
