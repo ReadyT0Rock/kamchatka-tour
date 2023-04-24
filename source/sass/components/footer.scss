@@ -50,6 +50,9 @@
       width: 227px;
 
       color: #bababa;
+      &:active {
+        color: $second-color-text;
+      }
     }
   }
   &__subscribe-text {
@@ -73,6 +76,9 @@
 
     border: 1px solid $main-color-bg;
     border-radius: 5px;
+    &:active {
+      opacity: 0.6;
+    }
   }
   &__subscribe-list-images {
     display: grid;
@@ -114,6 +120,9 @@
 
       background: url('../img/index/footer/mail.svg') no-repeat;
     }
+    &:active {
+      opacity: 0.6;
+    }
   }
   &__address {
     position: relative;
@@ -133,6 +142,9 @@
 
       background: url('../img/index/footer/location.svg') no-repeat;
     }
+    &:active {
+      opacity: 0.6;
+    }
   }
   &__copyright {
     min-height: 60px;
@@ -150,6 +162,11 @@
   }
   &__item {
     margin-bottom: 16px;
+  }
+  &__link {
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 

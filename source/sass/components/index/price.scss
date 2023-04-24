@@ -30,7 +30,7 @@
       margin-bottom: 48px;
 
       @include font(24px, 24px, 700);
-      &::after {
+      &:not(:last-child)::after {
         position: absolute;
         content: '';
         bottom: -24px;

@@ -34,3 +34,11 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .slider-buttons {
+    &--margin-promo {
+      margin-bottom: 45px;
+    }
+  }
+}

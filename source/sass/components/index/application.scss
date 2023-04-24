@@ -11,6 +11,10 @@
     font-family: $font-montserrat;
     @include font(32px, 40px, 700);
   }
+  &__form {
+    position: relative;
+    z-index: 2;
+  }
   &__legend {
     font-size: 14px;
 
@@ -217,6 +221,9 @@
     text-align: center;
 
     border-radius: 5px;
+    &:active {
+      opacity: 0.6;
+    }
     &:disabled {
       opacity: 0.7;
 

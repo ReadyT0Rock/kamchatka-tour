@@ -1,7 +1,20 @@
 .day-1 {
+  position: relative;
   min-height: 1200px;
 
   color: #acacac;
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -89px;
+    left: 0;
+
+    width: 320px;
+    height: 166px;
+
+    background: url('../img/bg-decorate-tablet-and-mobile-version.png') no-repeat;
+    background-size: 320px 166px;
+  }
   &__container {
     width: $mobile-width;
     min-height: inherit;
@@ -19,15 +32,36 @@
   }
   &__text {
     margin-bottom: 24px;
-    & > a {
+    & a {
       text-decoration: underline;
       text-underline-offset: 4px;
       &:active {
         opacity: 0.6;
       }
     }
-    & > b {
+    & b {
       color: $second-color-text;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .day-1 {
+    min-height: 957px;
+    &__container {
+      width: $tablet-width;
+      min-height: inherit;
+      padding: 0 40px;
+
+      overflow: hidden;
+    }
+    &__content {
+      margin-bottom: 48px;
+    }
+    &__text {
+      & a:hover {
+        color: #f47648;
+      }
     }
   }
 }

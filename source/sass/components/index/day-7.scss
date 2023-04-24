@@ -1,19 +1,6 @@
 .day-7 {
-  position: relative;
-
   min-height: 2016px;
   margin-bottom: 54px;
-  &::before {
-    position: absolute;
-    content: '';
-    top: -83px;
-    left: 2px;
-
-    width: 1025px;
-    height: 166px;
-
-    background: url('../img/bg-decorate-tablet-and-mobile-version.png') no-repeat;
-  }
   &__container {
     position: relative;
 

@@ -6,7 +6,6 @@
   padding-top: 21px;
 
   background-color: transparent;
-
   &__container {
     position: relative;
 
@@ -17,7 +16,6 @@
     margin: 0 auto;
     padding: 0 16px;
   }
-
   &__burger {
     position: relative;
     z-index: 1;
@@ -34,16 +32,13 @@
 
     background-color: transparent;
     border: none;
-
     &--nojs {
       display: none;
     }
-
     &--open {
       width: 20px;
       height: 20px;
     }
-
     &-decorate {
       width: 24px;
       height: 3px;
@@ -51,7 +46,6 @@
       border-radius: 1px;
       background-color: $third-color-text;
     }
-
     &--open {
       position: relative;
 
@@ -59,7 +53,6 @@
         display: none;
       }
     }
-
     &--open::before {
       position: absolute;
       content: '';
@@ -73,7 +66,6 @@
 
       transform: rotate(45deg);
     }
-
     &--open::after {
       position: absolute;
       content: '';
@@ -144,11 +136,18 @@
       border: 1px solid $second-color-bg;
       border-radius: 5px;
     }
+    &:active {
+      color: #f47648;
+    }
+    &--book:active {
+      border: 1px solid #f47648;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .header {
+    padding-top: 37px;
     &__container {
       justify-content: flex-start;
       width: $tablet-width;
@@ -166,20 +165,41 @@
       margin-left: auto;
       margin-right: 29px;
 
+      @include font(16px, 19px, 400);
       color: $third-color-text;
 
       background-color: transparent;
       border: 1px solid $third-color-bg;
       border-radius: 5px;
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active {
+        color: #f47648;
+
+        border: 1px solid #f47648;
+
+        opacity: 1;
+      }
     }
+  }
+
   .menu {
+    top: -37px;
     left: 450px;
     min-height: 500px;
     padding-bottom: 20px;
+    &__link {
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 1;
+      }
+    }
     &__link--book {
       display: none;
     }
   }
-}
 }
 

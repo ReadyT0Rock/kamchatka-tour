@@ -2,12 +2,25 @@
   min-height: 1064px;
   margin-bottom: 48px;
   &__container {
+    position: relative;
+
     width: $mobile-width;
     min-height: inherit;
     margin: 0 auto;
     padding: 6px 16px 0;
 
-    background-color: #000000;
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -131px;
+      left: 0;
+
+      width: 320px;
+      height: 166px;
+
+      background: url('../img/bg-decorate-tablet-and-mobile-version.png') no-repeat;
+      background-size: 320px 166px;
+    }
   }
   &__title {
     position: relative;
@@ -20,7 +33,6 @@
   }
   &__content {
     margin-bottom: 24px;
-
     & p:not(:last-child) {
       margin-bottom: 25px;
     }
@@ -37,7 +49,6 @@
     font-family: $font-montserrat;
     @include font(20px, 28px, 700);
   }
-
   &__additional-services {
     & dt {
       margin-bottom: 10px;

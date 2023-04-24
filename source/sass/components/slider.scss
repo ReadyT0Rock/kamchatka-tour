@@ -19,6 +19,8 @@
   }
   &__item {
     position: relative;
+
+    margin-right: 16.5px;
   }
   &__description-img {
     position: absolute;
@@ -30,7 +32,7 @@
     min-height: 100px;
     padding: 170px 16px 0;
     &--promo {
-      padding-top: 210px;
+      padding-top: 226px;
     }
     & b {
       display: inline-block;
@@ -52,7 +54,11 @@
       width: $tablet-width;
     }
     &__item:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 32px;
+    }
+    &__img:not(.promo .slider__img):first-child {
+      width: 320px;
+      height: 320px;
     }
   }
 }

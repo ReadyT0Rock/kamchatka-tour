@@ -4,25 +4,17 @@
   min-height: 1389px;
 
   color: $main-color-text;
-  background: url('../img/index/day-2/background.jpg') no-repeat;
-  background-position: 178px 390px;
-  &::before {
-    position: absolute;
-    content: '';
-    top: -70px;
-    left: 19px;
 
-    width: 1025px;
-    height: 166px;
-
-    background: url('../img/bg-decorate-tablet-and-mobile-version.png') no-repeat;
-  }
   &__container {
+    position: relative;
     width: $mobile-width;
     min-height: inherit;
     margin: 0 auto;
     padding: 0 16px;
     padding-top: 21px;
+
+    background: url('../img/index/day-2/background.jpg') no-repeat;
+    background-position: 0 390px;
   }
   &__title {
     position: relative;

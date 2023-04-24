@@ -22,7 +22,7 @@
     @include font(20px, 32px, 400);
   }
   &__content p:last-child {
-    margin-bottom: 48px;
+    margin-bottom: 62px;
   }
   &__description {
     display: inline-block;
@@ -83,6 +83,59 @@
     text-underline-offset: 4px;
     &:active {
       opacity: 0.5;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .info {
+    padding-top: 64px;
+    min-height: 1178px;
+    &__container {
+      width: $tablet-width;
+      min-height: inherit;
+      padding: 0 40px;
+
+      background: url('../img/index/info/bg-tablet.jpg') no-repeat;
+      background-position: 0px 195px;
+    }
+    &__title {
+      margin-bottom: 27px;
+
+      @include font(48px, 56px, 700);
+    }
+    &__content p:first-child {
+      width: 571px;
+      margin-bottom: 35px;
+
+      font-size: 24px;
+    }
+    &__content p:last-child {
+      width: 597px;
+      margin-bottom: 62px;
+    }
+    &__description {
+      width: 662px;
+      margin-bottom: 33px;
+
+      font-size: 24px;
+    }
+  }
+
+  .advantages {
+    grid-template-columns: repeat(4, 171.5px);
+    grid-template-rows: none;
+    grid-gap: 14px;
+    margin-bottom: 322px;
+  }
+
+  .blockquote {
+    width: 305px;
+    &__blockquote {
+      width: 305px;
+    }
+    &__author-link:hover {
+      color: #f47648;
     }
   }
 }
