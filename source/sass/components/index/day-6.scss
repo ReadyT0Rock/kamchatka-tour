@@ -8,7 +8,6 @@
     min-height: inherit;
     margin: 0 auto;
     padding: 6px 16px 0;
-
     &::before {
       position: absolute;
       content: '';
@@ -73,6 +72,55 @@
       }
       &:last-child {
         margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .day-6 {
+    position: relative;
+    min-height: 1007px;
+    &__container {
+      width: $tablet-width;
+      padding: 0 40px 60px;
+      &::before {
+        width: 768px;
+        height: 166px;
+
+        background: url('../img/bg-decorate-tablet-version.png') no-repeat;
+        background-size: 768px 166px;
+      }
+    }
+    &__title {
+      margin-bottom: 32px;
+
+      @include font(40px, 50px, 700);
+    }
+    &__content {
+      margin-bottom: 48px;
+    }
+    &__subtitle {
+      margin-bottom: 29px;
+    }
+    &__additional-services {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+      & dt {
+        width: 340px;
+        padding-left: 8px;
+        padding-top: 9px;
+      }
+      & dd {
+        width: 348px;
+        margin-bottom: 33px;
+        padding-left: 95px;
+        &::before {
+          left: -340px;
+
+          width: 688px;
+        }
       }
     }
   }

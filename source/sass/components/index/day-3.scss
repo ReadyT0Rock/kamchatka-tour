@@ -25,3 +25,39 @@
     margin-bottom: 25px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .day-3 {
+    position: relative;
+
+    min-height: 499px;
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -46px;
+      right: 258px;
+
+      width: 530px;
+      height: 299px;
+
+      background: url('../img/index/day-3/bg-eagle-tablet-version.png') no-repeat;
+    }
+    &__container {
+      width: $tablet-width;
+      padding: 0 40px;
+      padding-bottom: 128px;
+
+      background: #ffffff url('../img/index/day-3/background-tablet.jpg') no-repeat;
+      background-size: 100% 596px;
+      background-position-y: 340px;
+    }
+    &__title {
+      margin-bottom: 33px;
+
+      @include font(40px, 50px, 700);
+    }
+    &__content {
+      margin-bottom: 45px;
+    }
+  }
+}

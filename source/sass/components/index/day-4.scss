@@ -46,3 +46,34 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .day-4 {
+    min-height: 964px;
+    &__container {
+      width: $tablet-width;
+      padding: 0 40px 80px;
+      &::before {
+        left: 334px;
+        bottom: -88px;
+
+        width: 373px;
+        height: 315px;
+
+        background: url('../../../img/index/day-4/background-tablet.png') no-repeat;
+      }
+    }
+    &__title {
+      width: 600px;
+      margin-bottom: 32px;
+
+      @include font(40px, 50px, 700);
+    }
+    &__content {
+      margin-bottom: 46px;
+    }
+    &__text a:hover {
+      color: #f47648;
+    }
+  }
+}

@@ -53,3 +53,33 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .day-5 {
+    position: relative;
+    min-height: 882px;
+    margin-bottom: 80px;
+    &__container {
+      width: $tablet-width;
+      padding: 0 40px;
+      &::before {
+        width: 768px;
+        height: 2030px;
+
+        background: url('../img/index/day-5/background-tablet.jpg') no-repeat;
+        background-size: 768px 2030px;
+      }
+    }
+    &__title {
+      margin-bottom: 32px;
+
+      @include font(40px, 50px, 700);
+    }
+    &__content {
+      margin-bottom: 46px;
+    }
+    &__text a:hover {
+      color: #f47648;
+    }
+  }
+}

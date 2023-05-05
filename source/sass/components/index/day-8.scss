@@ -18,3 +18,26 @@
     color: $second-color-text;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .day-8 {
+    min-height: 494px;
+    margin-top: -284px;
+    margin-bottom: 64px;
+    &__container {
+      width: $tablet-width;
+      padding: 250px 40px 0;
+
+      background: url('../img/index/day-8/bg-tablet.png') no-repeat;
+      background-size: 768px 494px;
+    }
+    &__title {
+      margin-bottom: 32px;
+
+      color: $second-color-text;
+    }
+    &__content {
+      color: $second-color-text;
+    }
+  }
+}

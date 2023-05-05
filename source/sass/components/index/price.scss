@@ -150,3 +150,123 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .price {
+    min-height: 1033px;
+    margin-bottom: 65px;
+    &__container {
+      position: relative;
+
+      width: $tablet-width;
+      padding: 0 40px;
+      border: 0;
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 40px;
+
+        width: 688px;
+        height: 4px;
+
+        background-color: #212121;
+      }
+    }
+    &__title {
+      margin-bottom: 32px;
+
+      @include font(64px, 72px, 700);
+    }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__additional-services {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 3px;
+      & dt {
+        width: 450px;
+
+        font-size: 20px;
+      }
+      & dd {
+        width: 136px;
+        margin-bottom: 79px;
+        margin-left: auto;
+        &:not(:last-child)::after {
+          position: absolute;
+          content: '';
+          bottom: -44px;
+          left: -552px;
+
+          width: 688px;
+          height: 1px;
+
+          background-color: rgba(0, 0, 0, .4);
+        }
+      }
+    }
+    &__link-send {
+      position: absolute;
+      top: 628px;
+      left: 477px;
+
+      width: 237px;
+      order: 2;
+      margin-bottom: 0;
+      &::before {
+        right: 0;
+      }
+      &:hover {
+        color: #f47648;
+        &::before {
+          opacity: 0.6;
+        }
+      }
+    }
+    &__link {
+      font-size: 18px;
+      &:hover {
+        color: $third-color-text;
+      }
+    }
+  }
+
+  .include {
+    width: 437px;
+    margin-bottom: 0;
+    &__title {
+      margin-left: 35px;
+
+      font-size: 24px;
+      line-height: 24px;
+      &--include {
+        margin-bottom: 21px;
+      }
+      &--additional {
+        margin-bottom: 21px;
+      }
+      &::before {
+        top: 0;
+        left: -34px;
+
+        width: 26px;
+        height: 26px;
+
+        background-size: 26px 26px;
+      }
+    }
+    &__item:first-child {
+      margin-bottom: 48px;
+    }
+    &__item:last-child .include__subitem {
+      width: 437px;
+    }
+    &__subitem {
+      width: 323px;
+    }
+  }
+}
