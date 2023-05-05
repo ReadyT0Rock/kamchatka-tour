@@ -51,12 +51,16 @@
 @media (min-width: $tablet-width) {
   .slider {
     &__list {
-      width: $tablet-width;
+      width: 729px;
     }
     &__item:not(:last-child) {
       margin-right: 32px;
     }
     &__img:not(.promo .slider__img):first-child {
+      width: 320px;
+      height: 320px;
+    }
+    &__description-img {
       width: 320px;
       height: 320px;
     }

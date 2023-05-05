@@ -22,4 +22,14 @@
       width: 96px;
     }
   }
+  .application__social {
+    display: flex;
+    justify-content: space-between;
+    width: 136px;
+    margin-left: auto;
+    margin-top: 12px;
+    & .social__icon:hover {
+      stroke: #f47648;;
+    }
+  }
 }

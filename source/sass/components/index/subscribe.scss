@@ -79,3 +79,55 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .subscribe {
+    min-height: 909px;
+    margin-top: -484px;
+    margin-bottom: 64px;
+    &__container {
+      width: $tablet-width;
+      padding: 0 40px 111px 266px;
+
+      background: #000000 url('../img/index/subscribe/background-tablet.jpg') no-repeat;
+      background-size: 769px 908px;
+      background-position: left top;
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 72px;
+
+        width: 356px;
+        height: 332px;
+
+        background: url('../img/index/subscribe/magazine-tablet.png') no-repeat;
+        background-size: 241px 332px;
+      }
+    }
+    &__title {
+      @include font(36px, 48px, 700);
+    }
+    &__text {
+      width: 455px;
+      margin-bottom: 29px;
+
+      @include font(20px, 32px, 400);
+    }
+    &__form {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__form input {
+      width: 305px;
+      margin-bottom: 0;
+    }
+    &__btn {
+      width: 134px;
+      &:hover {
+        background-color: $main-color-bg;
+        color: #000000;
+      }
+    }
+  }
+}

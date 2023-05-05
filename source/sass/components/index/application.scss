@@ -21,13 +21,14 @@
     margin-bottom: 13px;
   }
   &__fieldset {
-    position: relative;
-
     padding: 0;
     margin: 0;
     margin-bottom: 24px;
 
     border: 0;
+    &--date {
+      position: relative;
+    }
   }
   &__input {
     width: 100%;
@@ -56,6 +57,17 @@
       padding-bottom: 5px;
       &::placeholder {
         color: #212121;
+      }
+      & + span::after {
+        position: absolute;
+        content: '';
+        right: -3px;
+        top: 8px;
+
+        width: 26.5px;
+        height: 24px;
+
+        background: url('../../../img/index/application/calendar.svg') no-repeat;
       }
     }
   }
@@ -228,6 +240,87 @@
       opacity: 0.7;
 
       cursor: auto;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .application {
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      width: $tablet-width;
+      padding: 0 40px;
+    }
+    &__title {
+      margin-bottom: 39px;
+
+      @include font(36px, 48px, 700);
+    }
+    &__social {
+      display: flex;
+    }
+    &__form {
+      display: flex;
+      flex-wrap: wrap;
+      width: 564px;
+    }
+    &__fieldset {
+      &--name,
+      &--amount {
+        width: 260px;
+      }
+      &--name {
+        margin-bottom: 48px;
+      }
+      &--amount {
+        margin-left: auto;
+      }
+      &--rate {
+        width: 100%;
+        margin-bottom: 31px;
+        & .application__legend {
+          margin-bottom: 23px;
+        }
+      }
+      &--date {
+        width: 260px;
+        margin-bottom: 37px;
+        & .application__legend {
+          margin-bottom: 8px;
+        }
+      }
+      &--comment {
+        width: 100%;
+        margin-bottom: 44px;
+      }
+    }
+    &__rate {
+      &-item {
+        display: flex;
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+      }
+      &-coust {
+        margin-left: auto;
+      }
+    }
+    &__input--date {
+      background-color: transparent;
+    }
+    &__btn-send {
+      width: 179px;
+      min-height: 40px;
+      padding: 8px 32px;
+      margin-left: auto;
+    }
+    &__comment {
+      min-height: 40px;
+      padding-bottom: 0;
+      &::placeholder {
+        color: #999999;
+      }
     }
   }
 }

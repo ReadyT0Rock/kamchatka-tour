@@ -88,3 +88,64 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .day-7 {
+    min-height: 1485px;
+    padding-top: 42px;
+    &__container {
+      width: $tablet-width;
+      padding: 0 40px 60px;
+      &::before {
+        top: -91px;
+
+        width: 768px;
+        height: 951px;
+
+        background: url('../img/index/day-7/background-tablet.jpg') no-repeat;
+        background-size: 768px 951px;
+      }
+    }
+    &__title {
+      margin-bottom: 48px;
+
+      @include font(39.7px, 50px, 700);
+    }
+    &__content {
+      margin-bottom: 48px;
+    }
+    &__text a:hover {
+      color: #f47648;
+    }
+    &__text:first-child,
+    &__text:nth-child(2) {
+      width: 263px;
+    }
+    &__text:nth-child(2) {
+      margin-bottom: 22px;
+    }
+    &__subtitle {
+      margin-bottom: 29px;
+    }
+    &__additional-services {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+      & dt {
+        width: 340px;
+        padding-left: 8px;
+        padding-top: 9px;
+      }
+      & dd {
+        width: 348px;
+        margin-bottom: 33px;
+        padding-left: 95px;
+        &::before {
+          left: -340px;
+
+          width: 688px;
+        }
+      }
+    }
+  }
+}

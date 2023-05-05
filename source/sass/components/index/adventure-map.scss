@@ -8,7 +8,6 @@
 
   font-family: $font-montserrat;
   @include font(24px, 32px, 700);
-  color: $second-color-text;
   & b {
     color: #f47648;
   }
