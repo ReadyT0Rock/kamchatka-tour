@@ -59,6 +59,11 @@
     &::after {
       transform: rotate(-135deg);
     }
+    &:active,
+    &:active::before,
+    &:active::after {
+      opacity: 0.7;
+    }
   }
   &__title {
     margin-bottom: 16px;
@@ -83,6 +88,9 @@
 
     background-color: transparent;
     border: none;
+    &:active {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -97,6 +105,13 @@
     }
     &__btn-close {
       margin-bottom: 391px;
+      &:hover {
+        border: 1px solid #f47648;
+      }
+      &:hover::before,
+      &:hover::after {
+        background-color: #f47648;
+      }
     }
     &__title {
       margin-bottom: 21px;
@@ -109,6 +124,9 @@
     }
     &__btn-return {
       margin-top: auto;
+      &:hover {
+        color: #f47648;
+      }
     }
   }
 }
