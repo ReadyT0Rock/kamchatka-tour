@@ -1,18 +1,20 @@
 .day-8 {
   min-height: 494px;
   margin-top: -228px;
-  margin-bottom: 43px;
+  margin-bottom: 41px;
   &__container {
     width: $mobile-width;
     min-height: inherit;
     margin: 0 auto;
-    padding: 229px 16px 45px;
+    padding: 227px 16px 45px;
 
     background: url('../img/index/day-8/bg-mobile.png') no-repeat;
     background-size: 320px 489px;
   }
   &__title {
     margin-bottom: 23px;
+
+    color: $second-color-text;
   }
   &__content {
     color: $second-color-text;
@@ -38,6 +40,32 @@
     }
     &__content {
       color: $second-color-text;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .day-8 {
+    min-height: 718px;
+    margin-top: -190px;
+    margin-bottom: 0;
+    & * {
+      z-index: 4;
+    }
+    &__container {
+      width: $desktop-width;
+      padding: 310px 96px 0;
+
+      background: url('../img/index/day-8/bg-desktop.jpg') no-repeat;
+      background-size: 1440px 718px;
+      & > div {
+        width: 504px;
+        margin-left: 395px;
+      }
+    }
+    &__title {
+      width: 470px;
+      margin-bottom: 50px;
     }
   }
 }

@@ -27,10 +27,10 @@
   }
   &__wrapper-content {
     min-height: 100%;
-    padding: 29px 24px;
+    padding: 32px 24px;
   }
   &__subtitle {
-    margin-bottom: 7px;
+    margin-bottom: 12px;
 
     font-family: $font-montserrat;
     @include font(18px, 24px, 700);
@@ -75,6 +75,41 @@
     }
     &__subtitle {
       margin-bottom: 11px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .expectations {
+    min-height: 609px;
+    margin-bottom: 77px;
+    & * {
+      z-index: 5;
+    }
+    &__container {
+      width: $desktop-width;
+      padding: 68px 96px 0;
+    }
+    &__title {
+      margin-bottom: 39px;
+    }
+    &__list {
+      grid-template-columns: repeat(4, 288px);
+      grid-gap: 32px;
+    }
+    &__item {
+      width: 288px;
+      min-height: 373px;
+    }
+    &__img {
+      width: 288px;
+      height: 161px;
+    }
+    &__wrapper-content {
+      padding: 25px 24px;
+    }
+    &__subtitle {
+      margin-bottom: 8px;
     }
   }
 }

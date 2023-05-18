@@ -16,13 +16,13 @@
     font-family: $font-montserrat;
     @include font(32px, 40px, 700);
   }
+  &__content {
+    margin-bottom: 49px;
+  }
   &__content p:first-child {
     margin-bottom: 16px;
 
     @include font(20px, 32px, 400);
-  }
-  &__content p:last-child {
-    margin-bottom: 62px;
   }
   &__description {
     display: inline-block;
@@ -137,5 +137,27 @@
     &__author-link:hover {
       color: #f47648;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .info {
+    min-height: 1007px;
+    padding-top: 0;
+    &__container {
+      width: $desktop-width;
+      padding: 0 96px 143px;
+
+      background: url('../img/index/info/bg-desktop.jpg') no-repeat;
+      background-position: bottom left;
+    }
+    &__title {
+      width: 728px;
+    }
+  }
+  .advantages {
+    grid-template-columns: repeat(4, 175px);
+    grid-gap: 30px;
+    margin-bottom: 384px;
   }
 }

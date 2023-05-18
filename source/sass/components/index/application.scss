@@ -29,6 +29,9 @@
     &--date {
       position: relative;
     }
+    &--amount {
+      position: relative;
+    }
   }
   &__input {
     width: 100%;
@@ -55,8 +58,13 @@
     }
     &--date {
       padding-bottom: 5px;
+
+      cursor: pointer;
       &::placeholder {
         color: #212121;
+      }
+      &::-webkit-calendar-picker-indicator{
+        opacity: 0;
       }
       & + span::after {
         position: absolute;
@@ -73,8 +81,8 @@
   }
   &__wrapper__btn {
     position: absolute;
-    top: 13px;
-    right: 3px;
+    top: 10px;
+    right: -1px;
 
     display: flex;
     justify-content: space-between;
@@ -128,9 +136,21 @@
       transform: rotate(90deg);
     }
   }
+  &__fieldset--rate .application__legend {
+    margin-bottom: 20px;
+  }
+  &__fieldset--date .application__legend {
+    margin-bottom: 6px;
+  }
+  &__fieldset--comment {
+    margin-bottom: 34px;
+  }
   &__rate {
     &-fieldset {
       margin-bottom: 19px;
+      &--name {
+        margin-bottom: 23px;
+      }
     }
     &-fieldset > legend {
       margin-bottom: 23px;
@@ -251,6 +271,11 @@
       flex-wrap: wrap;
       width: $tablet-width;
       padding: 0 40px;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
     }
     &__title {
       margin-bottom: 39px;
@@ -292,7 +317,7 @@
       }
       &--comment {
         width: 100%;
-        margin-bottom: 44px;
+        margin-bottom: 41px;
       }
     }
     &__rate {
@@ -321,6 +346,24 @@
       &::placeholder {
         color: #999999;
       }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .application {
+    &__container {
+      width: $desktop-width;
+      padding: 0 96px 0;
+      & > div {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: auto;
+        margin-right: 266px;
+      }
+    }
+    &__title {
+      margin-bottom: 28px;
     }
   }
 }

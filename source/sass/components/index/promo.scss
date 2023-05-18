@@ -45,7 +45,7 @@
     position: relative;
 
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 
     @include font(18px, 24px, 400);
     text-decoration: underline;
@@ -60,7 +60,7 @@
       width: 48px;
       height: 48px;
 
-      background: url('../../../img/icon/arrow-diagonally.svg') no-repeat;
+      background: url('../img/icon/arrow-diagonally.svg') no-repeat;
       background-size: 48px 48px;
     }
     &:active,
@@ -133,6 +133,47 @@
     }
     &__social-icon:hover {
       fill: #f47648;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    min-height: 833px;
+    margin-top: -125px;
+    margin-bottom: 120px;
+    &__container {
+      display: grid;
+      grid-template-columns: (624px 628px);
+      grid-template-rows: (543px 116px);
+      width: $desktop-width;
+      padding: 163px 96px 0;
+
+      background: URL('../img/index/promo/background-desktop.jpg') no-repeat;
+      & + div {
+        width: 624px;
+      }
+    }
+    &__title {
+      width: 620px;
+    }
+    &__data {
+      margin-bottom: 42px;
+    }
+    &__text {
+      margin-bottom: 37px;
+    }
+    &__social-list {
+      width: 63px;
+      margin-left: 0;
+    }
+    & .slider {
+      grid-row: span 2;
+      margin-top: 297px;
+      margin-left: 16px;
+    }
+    & .slider-buttons--margin-promo {
+      margin-bottom: 0;
     }
   }
 }

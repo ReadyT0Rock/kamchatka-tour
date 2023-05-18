@@ -26,8 +26,24 @@
 
 @media (min-width: $desktop-width) {
   .adventure-map {
+    position: relative;
+
     width: $desktop-width;
-    min-height: 7372px;
+    min-height: 7357px;
+    margin-top: -1px;
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 5;
+      top: 58px;
+      left: 23px;
+
+      width: 751px;
+      height: 6922px;
+
+      background: url('../../../img/map-line.svg') no-repeat;
+      background-size: 751px 6922px;
+    }
   }
 }
 
