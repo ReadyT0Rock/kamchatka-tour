@@ -49,7 +49,7 @@
 
 @media (min-width: $tablet-width) {
   .day-4 {
-    min-height: 964px;
+    min-height: 962px;
     &__container {
       width: $tablet-width;
       padding: 0 40px 80px;
@@ -74,6 +74,49 @@
     }
     &__text a:hover {
       color: #f47648;
+    }
+    &__text {
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .day-4 {
+      z-index: 2;
+
+      min-height: 756px;
+    &__container {
+      display: flex;
+      width: $desktop-width;
+      padding: 95px 96px 0;
+
+      overflow: hidden;
+      & * {
+        z-index: 5;
+      }
+      & > div {
+        width: 538px;
+        margin-right: 103px;
+      }
+      &::before {
+        left: 966px;
+        bottom: -34px;
+      }
+    }
+    &__title {
+      margin-bottom: 49px;
+    }
+    &__content {
+      position: relative;
+      z-index: 4;
+
+      width: 475px;
+    }
+    & .slider {
+      margin-top: 62px;
     }
   }
 }

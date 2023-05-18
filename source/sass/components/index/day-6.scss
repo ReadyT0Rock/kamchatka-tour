@@ -1,30 +1,35 @@
 .day-6 {
-  min-height: 1064px;
-  margin-bottom: 48px;
+  min-height: 2178px;
+  margin-top: -1086px;
+  margin-bottom: 20px;
   &__container {
     position: relative;
 
     width: $mobile-width;
     min-height: inherit;
     margin: 0 auto;
-    padding: 6px 16px 0;
+    padding: 1087px 16px 0;
+
+    background: url('../img/index/day-6/background.jpg') no-repeat;
+    background-size: 320px 2178px;
     &::before {
       position: absolute;
       content: '';
-      bottom: -131px;
+      z-index: 2;
+      bottom: -101px;
       left: 0;
 
       width: 320px;
       height: 166px;
 
-      background: url('../img/bg-decorate-tablet-and-mobile-version.png') no-repeat;
+      background: url('../img/bg-decorate-mobile-version.png') no-repeat;
       background-size: 320px 166px;
     }
   }
   &__title {
     position: relative;
     z-index: 1;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
 
     font-family: $font-montserrat;
     @include font(24px, 30px, 700);
@@ -45,10 +50,13 @@
     color: $second-color-text;
   }
   &__subtitle {
+    margin-bottom: 14px;
+
     font-family: $font-montserrat;
     @include font(20px, 28px, 700);
   }
   &__additional-services {
+    margin-top: 0;
     & dt {
       margin-bottom: 10px;
     }
@@ -80,11 +88,18 @@
 @media (min-width: $tablet-width) {
   .day-6 {
     position: relative;
-    min-height: 1007px;
+    min-height: 2042px;
+    margin-top: -978px;
+    margin-bottom: 0;
     &__container {
       width: $tablet-width;
-      padding: 0 40px 60px;
+      padding: 978px 40px 60px;
+
+      background: url('../img/index/day-6/background-tablet.jpg') no-repeat;
+      background-size: 768px 2042px;
       &::before {
+        bottom: -75px;
+
         width: 768px;
         height: 166px;
 
@@ -122,6 +137,63 @@
           width: 688px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .day-6 {
+    min-height: 1655px;
+    margin-top: -1013px;
+    &__container {
+      z-index: 4;
+
+      display: flex;
+      width: $desktop-width;
+      padding: 805px 96px 0;
+
+      background: url('../img/index/day-6/background-desktop.jpg') no-repeat;
+      background-size: 1440px 1626px;
+
+      overflow: hidden;
+      &::before {
+        bottom: -145px;
+
+        width: 1440px;
+        height: 302px;
+
+        background: url('../img/bg-decorate-desktop-version.png') no-repeat;
+        background-size: 1440px 302px;
+      }
+      & > div {
+        width: 481px;
+        margin-right: 161px;
+      }
+    }
+    &__title {
+      margin-bottom: 48px;
+    }
+    &__content {
+      margin-bottom: 58px;
+    }
+    &__additional-services {
+      width: 481px;
+      & dt {
+        width: 128px;
+      }
+      & dd {
+        &::before {
+          left: -129px;
+
+          width: 481px;
+        }
+      }
+    }
+    &__subtitle {
+      margin-bottom: 31px;
+    }
+    & .slider {
+      margin-top: 106px;
     }
   }
 }

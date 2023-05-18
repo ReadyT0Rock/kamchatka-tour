@@ -6,34 +6,61 @@
     width: 304px;
     min-height: 268px;
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 
     overflow-x: scroll;
     &::-webkit-scrollbar {
       width: 0;
       height: 0;
     }
-    &--promo-margin {
-      margin-bottom: 10px;
+    &--promo {
+      margin-bottom: 18px;
+    }
+    &--team-list {
+      min-height: 383px;
+    }
+    &--team-list .slider__img {
+      position: relative;
+      left: 0;
+      top: 0;
     }
   }
   &__item {
     position: relative;
 
+    display: flex;
+    align-items: flex-end;
+    height: 288px;
     margin-right: 16.5px;
+    &--promo {
+      width: 270px;
+      height: 268px;
+      &:not(:first-child) {
+        width: 211.5px;
+        height: 209px;
+      }
+    }
+    &--profile-info {
+      flex-wrap: wrap;
+      align-content: space-between;
+      min-height: 431px;
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   &__description-img {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    top: 0;
-    left: 0;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 290px;
     min-height: 100px;
-    padding: 170px 16px 0;
-    &--promo {
-      padding-top: 226px;
-    }
+    padding: 0 16px 16px;
     & b {
       display: inline-block;
       margin-bottom: 5px;
@@ -52,9 +79,24 @@
   .slider {
     &__list {
       width: 729px;
+      &--team-list .slider__item--profile-info {
+        min-height: 514px;
+      }
     }
-    &__item:not(:last-child) {
+    &__item {
+      min-height: 320px;
       margin-right: 32px;
+      &--promo {
+        height: 209px;
+      }
+    }
+    &__item--promo {
+      width: 211px;
+      min-height: 209px;
+      &:first-child {
+        width: 269px;
+        min-height: 267px;
+      }
     }
     &__img:not(.promo .slider__img):first-child {
       width: 320px;
@@ -63,6 +105,10 @@
     &__description-img {
       width: 320px;
       height: 320px;
+      padding-bottom: 28px;
+      &--promo:not(:first-child) {
+        min-height: 209px;
+      }
     }
   }
 }

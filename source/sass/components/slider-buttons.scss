@@ -4,7 +4,7 @@
   width: 92px;
   height: 38px;
   &--margin-promo {
-    margin-bottom: 35px;
+    margin-bottom: 42px;
   }
   &__btn {
     position: relative;
@@ -30,15 +30,20 @@
       cursor: auto;
     }
     &:active:not(.slider-buttons__btn:disabled) {
-      opacity: 0.7;
+      opacity: 0.5;
     }
   }
 }
 
 @media (min-width: $tablet-width) {
   .slider-buttons {
+    &__btn:not(:disabled):hover {
+      opacity: 0.7;
+    }
     &--margin-promo {
       margin-bottom: 45px;
     }
   }
 }
+
+

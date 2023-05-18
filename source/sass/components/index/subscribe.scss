@@ -131,3 +131,36 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .subscribe {
+    min-height: 909px;
+    margin-top: -457px;
+    margin-bottom: 118px;
+    &__container {
+      width: $desktop-width;
+      padding: 0 150px 161px 400px;
+
+      background: #000000 url('../img/index/subscribe/background-desktop.jpg') no-repeat;
+      background-size: 1440px 908px;
+      background-position: left top;
+      &::before {
+        left: 64px;
+        bottom: 74px;
+      }
+    }
+    &__title {
+      font-size: 32px;
+    }
+    &__text {
+      width: 520px;
+    }
+    &__form {
+      justify-content: flex-start;
+      & input {
+        width: 563px;
+        margin-right: 24px;
+      }
+    }
+  }
+}

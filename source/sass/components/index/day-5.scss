@@ -9,18 +9,6 @@
     padding: 6px 16px 0;
 
     background-color: #000000;
-    &::before {
-      position: absolute;
-      content: '';
-      z-index: 0;
-      top: 0;
-      left: 0;
-      width: 320px;
-      height: 2178px;
-
-      background: url('../img/index/day-5/background.jpg') no-repeat;
-      background-size: 320px 2178px;
-    }
   }
   &__title {
     position: relative;
@@ -52,6 +40,10 @@
       margin-bottom: 25px;
     }
   }
+  & .slider {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -62,13 +54,6 @@
     &__container {
       width: $tablet-width;
       padding: 0 40px;
-      &::before {
-        width: 768px;
-        height: 2030px;
-
-        background: url('../img/index/day-5/background-tablet.jpg') no-repeat;
-        background-size: 768px 2030px;
-      }
     }
     &__title {
       margin-bottom: 32px;
@@ -80,6 +65,47 @@
     }
     &__text a:hover {
       color: #f47648;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .day-5 {
+    &__container {
+      display: flex;
+      width: $desktop-width;
+      padding: 73px 96px 0;
+
+      overflow: hidden;
+      & > div {
+        z-index: 5;
+
+        width: 536px;
+        order: 2;
+      }
+    }
+    &__title {
+      font-size: 37px;
+      margin-bottom: 30px;
+    }
+    &__content {
+      width: 457px;
+    }
+    & .slider {
+      position: relative;
+      z-index: 5;
+
+      margin-top: 84px;
+      margin-right: 171px;
+      order: 1;
+      &__list {
+        flex-direction: row-reverse;
+        margin-left: -217px;
+      }
+    }
+    & .slider-buttons {
+      margin-left: auto;
+      margin-right: 56px;
     }
   }
 }

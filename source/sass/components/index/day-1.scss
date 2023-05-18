@@ -52,8 +52,8 @@
   .day-1 {
     min-height: 973px;
     &::before {
-      left: 335px;
-      bottom: -83px;
+      left: 0px;
+      bottom: -75px;
 
       width: 769px;
       height: 167px;
@@ -73,6 +73,50 @@
       & a:hover {
         color: #f47648;
       }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .day-1 {
+    min-height: 817px;
+    margin-bottom: 104px;
+    & * {
+      z-index: 5;
+    }
+    &::before {
+      left: 0;
+      bottom: -176px;
+
+      width: 1440px;
+      min-height: 302px;
+
+      background: url('../img/bg-decorate-desktop-version.png') no-repeat;
+      background-size: 1440px 302px;
+      background-position: bottom;
+    }
+    &__container {
+      width: $desktop-width;
+      padding: 64px 96px 0;
+
+      background-size: 1440px 833px;
+      background-position: 0;
+
+      overflow: hidden;
+      & > div {
+        display: flex;
+      }
+    }
+    &__title {
+      width: 461px;
+      margin-bottom: 49px;
+    }
+    &__content {
+      width: 461px;
+    }
+    & .slider {
+      margin-top: 86px;
+      margin-left: 180px;
     }
   }
 }

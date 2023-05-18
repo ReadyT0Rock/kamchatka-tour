@@ -1,6 +1,6 @@
 .team {
   min-height: 620px;
-  margin-bottom: 55px;
+  margin-bottom: 43px;
   &__container {
     width: $mobile-width;
     min-height: inherit;
@@ -22,10 +22,8 @@
 .slider {
   &__item {
     &--profile-info {
+      width: 289px;
       margin-right: 16px;
-      & .slider__img {
-        margin-bottom: 18px;
-      }
       & cite {
         @include font(18px, 24px, 700);
         font-style: normal;
@@ -71,12 +69,43 @@
     width: 352px;
     height: 466px;
   }
+  .slider__item--profile-info {
+    width: auto;
+  }
   .slider__link-social {
     &:hover {
       color: $third-color-text;
     }
     &:active {
       opacity: 0.7;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .team {
+    margin-bottom: 133px;
+    &__container {
+      width: $desktop-width;
+      padding: 0 96px;
+    }
+    &__title {
+      width: 906px;
+      margin-bottom: 59px;
+    }
+    &__text {
+      display: block;
+      width: 511px;
+      margin-bottom: 79px;
+    }
+    & .slider__list--team-list {
+      width: 1440px;
+    }
+    .slider__item--profile-info:not(:last-child) {
+      margin-right: 96px;
+    }
+    .slider__item--profile-info {
+      width: 352px;
     }
   }
 }
