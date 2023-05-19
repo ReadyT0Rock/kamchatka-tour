@@ -12,7 +12,7 @@
     padding: 0 16px;
     padding-top: 123px;
 
-    background: url('../img/index/promo/background.jpg') no-repeat;
+    background-image: image-set('../img/index/promo/background.jpg' 1x, '../img/index/promo/background@2x.jpg' 2x);
     background-size: cover;
 
     overflow: hidden;
@@ -149,7 +149,8 @@
       width: $desktop-width;
       padding: 163px 96px 0;
 
-      background: URL('../img/index/promo/background-desktop.jpg') no-repeat;
+      background-image: image-set('../img/index/promo/background-desktop.jpg' 1x, '../img/index/promo/background-desktop@2x.jpg' 2x);
+      background-size: 1440px 833px;
       & + div {
         width: 624px;
       }
