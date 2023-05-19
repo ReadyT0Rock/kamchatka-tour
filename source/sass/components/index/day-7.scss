@@ -18,7 +18,9 @@
       width: 320px;
       height: 810px;
 
-      background: url('../img/index/day-7/background-mobile.jpg') no-repeat;
+      background-image: image-set('../img/index/day-7/background-mobile.jpg' 1x, '../img/index/day-7/background-mobile@2x.jpg' 2x);
+      background-size: 320px 811px;
+      background-repeat: no-repeat;
     }
   }
   &__title {
@@ -107,8 +109,9 @@
         width: 768px;
         height: 951px;
 
-        background: url('../img/index/day-7/background-tablet.jpg') no-repeat;
+        background-image: image-set('../img/index/day-7/background-tablet.jpg' 1x, '../img/index/day-7/background-tablet@2x.jpg' 2x);
         background-size: 768px 951px;
+        background-repeat: no-repeat;
       }
     }
     &__title {
@@ -176,8 +179,9 @@
 
         width: 1029px;
 
-        background: url('../img/index/day-7/background-desktop.jpg') no-repeat;
+        background-image: image-set('../img/index/day-7/background-desktop.jpg' 1x, '../img/index/day-7/background-desktop@2x.jpg' 2x);
         background-size: 1029px 951px;
+        background-repeat: no-repeat;
       }
     }
     &__title {

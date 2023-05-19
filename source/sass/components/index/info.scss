@@ -7,8 +7,10 @@
     margin: 0 auto;
     padding: 0 16px;
 
-    background: url('../img/index/info/bg-mobile.jpg') no-repeat;
+    background-image: image-set('../img/index/info/bg-mobile.jpg' 1x, '../img/index/info/bg-mobile@2x.jpg' 2x);
+    background-size: 320px 940px;
     background-position: left bottom;
+    background-repeat: no-repeat;
   }
   &__title {
     margin-bottom: 24px;
@@ -96,8 +98,10 @@
       min-height: inherit;
       padding: 0 40px;
 
-      background: url('../img/index/info/bg-tablet.jpg') no-repeat;
+      background-image: image-set('../img/index/info/bg-tablet.jpg' 1x, '../img/index/info/bg-tablet@2x.jpg' 2x);
       background-position: 0px 195px;
+      background-size: 768px 1007px;
+      background-repeat: no-repeat;
     }
     &__title {
       margin-bottom: 27px;
@@ -148,8 +152,10 @@
       width: $desktop-width;
       padding: 0 96px 143px;
 
-      background: url('../img/index/info/bg-desktop.jpg') no-repeat;
+      background-image: image-set('../img/index/info/bg-desktop.jpg' 1x, '../img/index/info/bg-desktop@2x.jpg' 2x);
       background-position: bottom left;
+      background-size: 1440px 927px;
+      background-repeat: no-repeat;
     }
     &__title {
       width: 728px;

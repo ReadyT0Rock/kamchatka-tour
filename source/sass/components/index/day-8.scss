@@ -8,8 +8,9 @@
     margin: 0 auto;
     padding: 227px 16px 45px;
 
-    background: url('../img/index/day-8/bg-mobile.png') no-repeat;
+    background-image: image-set('../img/index/day-8/bg-mobile.png' 1x, '../img/index/day-8/bg-mobile@2x.png' 2x);
     background-size: 320px 489px;
+
   }
   &__title {
     margin-bottom: 23px;
@@ -30,7 +31,7 @@
       width: $tablet-width;
       padding: 250px 40px 0;
 
-      background: url('../img/index/day-8/bg-tablet.png') no-repeat;
+      background-image: image-set('../img/index/day-8/bg-tablet.png' 1x, '../img/index/day-8/bg-tablet@2x.png' 2x);
       background-size: 768px 494px;
     }
     &__title {
@@ -56,7 +57,7 @@
       width: $desktop-width;
       padding: 310px 96px 0;
 
-      background: url('../img/index/day-8/bg-desktop.jpg') no-repeat;
+      background-image: image-set('../img/index/day-8/bg-desktop.jpg' 1x, '../img/index/day-8/bg-desktop@2x.jpg' 2x);
       background-size: 1440px 718px;
       & > div {
         width: 504px;

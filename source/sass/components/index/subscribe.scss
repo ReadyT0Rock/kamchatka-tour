@@ -13,9 +13,11 @@
     margin: 0 auto;
     padding: 0 16px 54px;
 
-    background: #000000 url('../img/index/subscribe/background-mobile.jpg') no-repeat;
+    background-color: #000000;
+    background-image: image-set('../img/index/subscribe/background-mobile.jpg' 1x, '../img/index/subscribe/background-mobile@2x.jpg' 2x);
     background-size: 320px auto;
     background-position: left top;
+    background-repeat: no-repeat;
     &::before {
       position: absolute;
       content: '';
@@ -25,8 +27,9 @@
       width: 144px;
       height: 214px;
 
-      background: url('../img/index/subscribe/magazine-mobile.png') no-repeat;
+      background-image: image-set('../img/index/subscribe/magazine-mobile.png' 1x, '../img/index/subscribe/magazine-mobile@2x.png' 2x);
       background-size: 144px 214px;
+      background-repeat: no-repeat;
     }
   }
   &__title {
@@ -89,9 +92,10 @@
       width: $tablet-width;
       padding: 0 40px 111px 266px;
 
-      background: #000000 url('../img/index/subscribe/background-tablet.jpg') no-repeat;
+      background-image: image-set('../img/index/subscribe/background-tablet.jpg' 1x, '../img/index/subscribe/background-tablet@2x.jpg' 2x);
       background-size: 769px 908px;
       background-position: left top;
+      background-repeat: no-repeat;
       &::before {
         position: absolute;
         content: '';
@@ -101,8 +105,9 @@
         width: 356px;
         height: 332px;
 
-        background: url('../img/index/subscribe/magazine-tablet.png') no-repeat;
+        background-image: image-set('../img/index/subscribe/magazine-tablet.png' 1x, '../img/index/subscribe/magazine-tablet@2x.png' 2x);
         background-size: 241px 332px;
+        background-repeat: no-repeat;
       }
     }
     &__title {
@@ -141,9 +146,11 @@
       width: $desktop-width;
       padding: 0 150px 161px 400px;
 
-      background: #000000 url('../img/index/subscribe/background-desktop.jpg') no-repeat;
+      background-color: #000000;
+      background-image: image-set('../img/index/subscribe/background-desktop.jpg' 1x, '../img/index/subscribe/background-desktop@2x.jpg' 2x);
       background-size: 1440px 908px;
       background-position: left top;
+      background-repeat: no-repeat;
       &::before {
         left: 64px;
         bottom: 74px;

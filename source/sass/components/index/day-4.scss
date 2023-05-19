@@ -18,7 +18,9 @@
       width: 329px;
       height: 278px;
 
-      background: url('../../../img/index/day-4/background-mobile.png') no-repeat;
+      background-image: image-set('../img/index/day-4/background-mobile.png' 1x, '../img/index/day-4/background-mobile@2x.png' 2x);
+      background-size: 320px 278px;
+      background-repeat: no-repeat;
     }
   }
   &__title {
@@ -60,7 +62,9 @@
         width: 373px;
         height: 315px;
 
-        background: url('../../../img/index/day-4/background-tablet.png') no-repeat;
+        background-image: image-set('../img/index/day-4/background-tablet.png' 1x, '../img/index/day-4/background-tablet@2x.png' 2x);
+        background-size: 373px 315px;
+        background-repeat: no-repeat;
       }
     }
     &__title {

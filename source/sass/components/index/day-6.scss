@@ -10,8 +10,9 @@
     margin: 0 auto;
     padding: 1087px 16px 0;
 
-    background: url('../img/index/day-6/background.jpg') no-repeat;
+    background-image: image-set('../img/index/day-6/background.jpg' 1x, '../img/index/day-6/background@2x.jpg' 2x);
     background-size: 320px 2178px;
+    background-repeat: no-repeat;
     &::before {
       position: absolute;
       content: '';
@@ -22,8 +23,9 @@
       width: 320px;
       height: 166px;
 
-      background: url('../img/bg-decorate-mobile-version.png') no-repeat;
+      background-image: image-set('../img/bg-decorate-mobile-version.png' 1x, '../img/bg-decorate-mobile-version@2x.png' 2x);
       background-size: 320px 166px;
+      background-repeat: no-repeat;
     }
   }
   &__title {
@@ -95,16 +97,18 @@
       width: $tablet-width;
       padding: 978px 40px 60px;
 
-      background: url('../img/index/day-6/background-tablet.jpg') no-repeat;
+      background-image: image-set('../img/index/day-6/background-tablet.jpg' 1x, '../img/index/day-6/background-tablet@2x.jpg' 2x);
       background-size: 768px 2042px;
+      background-repeat: no-repeat;
       &::before {
         bottom: -75px;
 
         width: 768px;
         height: 166px;
 
-        background: url('../img/bg-decorate-tablet-version.png') no-repeat;
+        background-image: image-set('../img/bg-decorate-tablet-version.png' 1x, '../img/bg-decorate-tablet-version@2x.png' 2x);
         background-size: 768px 166px;
+        background-repeat: no-repeat;
       }
     }
     &__title {
@@ -152,8 +156,9 @@
       width: $desktop-width;
       padding: 805px 96px 0;
 
-      background: url('../img/index/day-6/background-desktop.jpg') no-repeat;
+      background-image: image-set('../img/index/day-6/background-desktop.jpg' 1x, '../img/index/day-6/background-desktop@2x.jpg' 2x);
       background-size: 1440px 1626px;
+      background-repeat: no-repeat;
 
       overflow: hidden;
       &::before {
@@ -162,8 +167,9 @@
         width: 1440px;
         height: 302px;
 
-        background: url('../img/bg-decorate-desktop-version.png') no-repeat;
+        background-image: image-set('../img/bg-decorate-desktop-version.png' 1x, '../img/bg-decorate-desktop-version@2x.png' 2x);
         background-size: 1440px 302px;
+        background-repeat: no-repeat;
       }
       & > div {
         width: 481px;
